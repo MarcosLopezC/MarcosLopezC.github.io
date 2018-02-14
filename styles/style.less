@@ -42,11 +42,14 @@ body.cover-page {
 	div.jumbotron {
 		text-align: center;
 		color: #fff;
-		display: flex;
-		align-items: center;
 		background-color: transparent;
-		height: 100vh;
 		margin: 0;
+
+		@media (min-height: 450px) {
+			display: flex;
+			align-items: center;
+			height: 100vh;
+		}
 
 		a {
 			text-decoration: none;
