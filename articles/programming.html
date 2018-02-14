@@ -1,0 +1,239 @@
+<!-- Hi! It's nice of you to check out my code. Let me know if you like it. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Marcos López C.</title>
+
+	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+	<link rel="stylesheet" type="text/css" href="/styles/style.css" />
+</head>
+
+<body class="article-page">
+
+<header>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="div.navbar-collapse" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">Marcos López C.</a>
+			</div>
+
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/articles/about.html">About</a></li>
+<li><a href="/articles/programming.html">Programming</a></li>
+<li><a href="/articles/music.html">Music</a></li>
+<li><a href="/articles/photography.html">Photography</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+
+
+<main>
+	<article>
+
+<h1>Programming</h1><h2>BALLGAME</h2><p>Here is a fun one.
+This is the very first graphical game that I ever wrote; a simple pong clone named <code>BALLGAME.BAS</code>.</p>
+<p>I wrote this back in high school when I was taking a programing class on <a href="https://en.wikipedia.org/wiki/QBasic">QBasic</a>.
+The teacher had just briefly gone over the graphic modes in QBasic.
+That weekend, I used what I had learned to write this game.</p>
+<p>The teacher had only showed us how to draw points, lines, and arcs;
+but that was enough for me to figure out the rest and get the animation to work.</p>
+<p>I was very proud when I got back to class and showed everyone what I had done.</p>
+<h3>Source Code</h3><pre><code>DECLARE SUB PlayerCPU ()
+DECLARE SUB Begin ()
+DECLARE SUB Score ()
+DECLARE SUB PlayerBar ()
+DECLARE FUNCTION Ball ()
+DECLARE SUB Table ()
+SCREEN 7
+DIM SHARED X, Y, XM, YM, YB, YC, SCR, TU, LVL
+
+RANDOMIZE TIMER
+
+Begin
+
+Start:
+CLS
+&#39;Values Setup
+X = INT(RND * 100 + 30): Y = X
+XM = (INT(RND * 80 + 40)) / 1000: YM = (INT(RND * 80 + 40)) / 1000
+YB = 15
+SCR = 0
+TU = 100
+
+PRINT &quot;Made By Marcos Lopez&quot;: Score
+
+&#39;Game Loop
+DO
+
+    Table
+    IF Ball THEN
+        CLS
+        Score
+        LOCATE 11, 18: PRINT &quot;You Lost!&quot;
+        LOCATE 13, 9: PRINT &quot;Press ENTER to Play again!&quot;
+        PLAY &quot;E8 A2&quot;
+        IF INPUT$(1) = CHR$(13) THEN GOTO Start ELSE END
+    END IF
+    PlayerBar
+    PlayerCPU
+
+LOOP
+END
+
+FUNCTION Ball
+
+    &#39;Clear
+    CIRCLE (X, Y), 2, 0
+
+    &#39;Motion
+    X = X + XM
+    Y = Y + YM
+
+    CIRCLE (X, Y), 2, 15
+
+    &#39;Bounding Colitions
+    IF X &lt;= 14 OR X &gt;= 282 THEN XM = XM * -1: SOUND 3000, 1: SOUND 5000, 1
+    IF Y &lt;= 14 OR Y &gt;= 178 THEN YM = YM * -1: SOUND 3500, 1
+
+    &#39;Bar Colition
+    IF X &lt;= 27 THEN
+        IF Y &gt;= YB AND Y &lt;= YB + 40 THEN
+            CIRCLE (X, Y), 2, 0
+            XM = XM * -1
+            X = 27
+            Score
+            SOUND 4000, 1: SOUND 5500, 1
+        END IF
+    END IF
+
+    &#39;Lose
+    IF X &lt; 14 THEN
+        Ball = -1
+    END IF
+
+END FUNCTION
+
+SUB Begin
+    COLOR 11
+    LOCATE 11, 18: PRINT &quot;Ball Game&quot;
+    COLOR 3
+    LOCATE 12, 15: PRINT &quot;By Marcos Lopez&quot;
+    COLOR 7
+    LOCATE 16, 9: PRINT &quot;Press SPACE to continue...&quot;
+    DO
+        IF INKEY$ = &quot; &quot; THEN EXIT DO
+    LOOP
+    CLS
+    PRINT &quot;INTRUCTIONS&quot;: PRINT
+    PRINT TAB(3); &quot;Use Num 8 and Num 2 to stop the ball&quot;
+    PRINT TAB(3); &quot;from hitting your side of the wall.&quot;
+    PRINT : PRINT TAB(3); &quot;If you want to quit while playing,&quot;
+    PRINT TAB(3); &quot;just press SPACE key.&quot;
+    LOCATE 16, 10: PRINT &quot;Press Space to Start!&quot;
+    DO
+        IF INKEY$ = &quot; &quot; THEN EXIT DO
+    LOOP
+    COLOR 7
+END SUB
+
+SUB PlayerBar
+
+    &#39;Keys
+    SELECT CASE INKEY$
+        CASE IS = &quot;8&quot;
+            IF NOT YB &lt; 25 THEN
+            LINE (20, YB)-(25, YB + 40), 0, BF
+            YB = YB - 15
+            END IF
+        CASE IS = &quot;2&quot;
+            IF NOT YB &gt; 120 THEN
+            LINE (20, YB)-(25, YB + 40), 0, BF
+            YB = YB + 15
+            END IF
+        CASE IS = &quot; &quot;
+            CLS
+            PRINT &quot;Hope you liked my game &quot;; CHR$(1)
+            END
+    END SELECT
+
+    LINE (20, YB)-(25, YB + 40), 15, BF
+
+END SUB
+
+SUB PlayerCPU
+
+    TU = TU - 1
+    IF TU &lt;= 0 THEN
+        IF Y &gt;= 30 AND Y &lt;= 155 THEN
+            IF XM &gt; 0 THEN
+                LINE (285, YC)-(290, YC + 40), 0, BF
+                YC = Y - 20
+                LINE (285, YC)-(290, YC + 40), 15, BF
+            END IF
+        END IF
+        TU = 100
+    END IF
+
+END SUB
+
+SUB Score
+
+    LOCATE 1, 25
+    COLOR 11
+    PRINT &quot;Score:&quot;
+    LOCATE 1, 32
+    COLOR 3
+    PRINT USING &quot;########&quot;; SCR
+    SCR = SCR + 100
+    COLOR 7
+
+    LVL = LVL + 1
+    IF LVL &gt;= 5 THEN
+        LVL = 0
+        XM = XM * 1.2
+        YM = YM * 1.05
+    END IF
+
+
+END SUB
+
+SUB Table
+
+    LINE (11, 11)-(301, 181), 7, B
+    LINE (10, 10)-(300, 180), 15, B
+
+END SUB
+</code></pre>
+
+	</article>
+</main>
+
+<footer>
+	<div class="container legal">
+		<p>&copy; 2018 Marcos López C.</p>
+	</div>
+</footer>
+
+
+<script src="/scripts/jquery-3.2.1.min.js"></script>
+<script src="/scripts/bootstrap.min.js"></script>
+
+</body>
+
+</html>

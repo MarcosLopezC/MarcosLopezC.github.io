@@ -1,49 +1,95 @@
 <!-- Hi! It's nice of you to check out my code. Let me know if you like it. -->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Home - Marcos López C.</title>
-	<link rel="shortcut icon" type="image/png" href="favicon.png" />
-	<link rel="stylesheet" type="text/css" href="css/main.css" />
+
+	<title>Marcos López C.</title>
+
+	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+	<link rel="stylesheet" type="text/css" href="/styles/style.css" />
 </head>
 
-<body>
+<body class="cover-page">
 
 <header>
-	<div class="container">
-		<a href="/"><img src="img/logo.png" alt="Marcos López C." width="212px" height="60px" /></a>
-		<nav>
-			<ul>
-				<li><a href="//github.com/MarcosLopezC">GitHub</a></li>
-				<li><a href="/contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</div>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="div.navbar-collapse" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+
+<li><a href="/articles/about.html">About</a></li>
+<li><a href="/articles/programming.html">Programming</a></li>
+<li><a href="/articles/music.html">Music</a></li>
+<li><a href="/articles/photography.html">Photography</a></li>
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
 </header>
 
-<main class="container">
+<main>
+	<div class="jumbotron">
+		<div class="container">
+			<h1>
+				<span class="text-atom">Marcos V.</span>
+				<span class="text-atom">López Castellanos</span>
+			</h1>
+			<p>
+				<span class="text-atom">A software developer by day,</span>
+				<span class="text-atom">musician by night,</span>
+				<span class="text-atom">and photographer on the weekends</span>
+			</p>
+			<p class="social-icon-container">
+				<a href="https://www.linkedin.com/in/MarcosLopezC/" target="_blank" title="LinkedIn">
+					<span class="fa-stack">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
 
-<p><img src="img/me.jpg" alt="Marcos">
-Welcome to my little place on the Internet.
-My name is Marcos and I love programming.
-I make computer programs during my free time.
-You can check out some of them at <a href="//github.com/MarcosLopezC">GitHub</a>.</p>
-<p>I don&#39;t have a lot to show off right now,
-but I&#39;ll be uploading more stuff in the near future.</p>
+				<a href="https://github.com/MarcosLopezC/" target="_blank" title="GitHub">
+					<span class="fa-stack">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
 
+				<a href="https://www.youtube.com/user/MarcosLopezMusic" target="_blank" title="YouTube">
+					<span class="fa-stack">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-youtube-play fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
 
+				<a href="https://www.flickr.com/photos/MarcosLopezCastellanos/" target="_blank" title="flickr">
+					<span class="fa-stack">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-flickr fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+			</p>
+		</div>
+	</div>
 </main>
 
-<footer class="container">
-	<p class="legal">&copy; 2015 Marcos López C.<p>
-</footer>
-
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="/scripts/jquery-3.2.1.min.js"></script>
+<script src="/scripts/bootstrap.min.js"></script>
 
 </body>
 
