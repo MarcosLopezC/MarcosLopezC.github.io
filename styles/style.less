@@ -45,7 +45,7 @@ body.cover-page {
 		background-color: transparent;
 		margin: 0;
 
-		@media (min-height: 450px) {
+		@media (min-height: 500px) {
 			display: flex;
 			align-items: center;
 			height: 100vh;
@@ -168,4 +168,17 @@ div.image-list-container {
 
 span.text-atom {
 	display: inline-block;
+}
+
+pre {
+	overflow-x: auto;
+
+	code {
+		overflow-wrap: normal;
+		white-space: pre;
+	}
+}
+
+iframe.embed-responsive-item {
+	padding-bottom: 1em;
 }
