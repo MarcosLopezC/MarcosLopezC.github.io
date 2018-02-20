@@ -1,6 +1,10 @@
 @import "_bootstrap/bootstrap.less";
 @import "_fontAwesome/font-awesome.less";
 
+html {
+	min-height: 100%;
+}
+
 body {
 	background-color: #f0f0f0;
 	width: 100%;
@@ -50,6 +54,7 @@ body.cover-page {
 		top: 0;
 		left: 0;
 		width: 100%;
+		z-index: -1;
 
 		@media (min-height: 500px) {
 			display: flex;
