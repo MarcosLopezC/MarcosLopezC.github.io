@@ -7,7 +7,7 @@ The scope of my work generally involves writing software for the entire stack of
 
 On my free time I like to play and compose music, take interesting pictures, learn about new computer technologies, and write open-source software.
 
-To reach me, send an email to: <MarcosLopezC@live.com>
+To reach me, send an email to: [MarcosLopezC@live.com](mailto:marcoslopezc@live.com).
 
 [wiki_fort_lauderdale]: https://en.wikipedia.org/wiki/Fort_Lauderdale,_Florida
 [wiki_fau]: https://en.wikipedia.org/wiki/Florida_Atlantic_University
