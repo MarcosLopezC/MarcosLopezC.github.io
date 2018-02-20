@@ -46,6 +46,16 @@ body.cover-page {
 		background-color: transparent;
 		margin: 0;
 		padding-bottom: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+
+		@media (min-height: 500px) {
+			display: flex;
+			align-items: center;
+			height: 100vh;
+		}
 
 		div.container {
 			& > h1,
@@ -53,12 +63,6 @@ body.cover-page {
 			& > p.social-icon-container i.fa-circle {
 				text-shadow: fade(#000, 30%) 0 0 5px;
 			}
-		}
-
-		@media (min-height: 500px) {
-			display: flex;
-			align-items: center;
-			height: 100vh;
 		}
 
 		a {
