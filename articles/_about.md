@@ -1,4 +1,4 @@
-My name is Marcos Vladimir López Castellanos and I'm a software developer based in [Fort Lauderdale, Florida][wiki_fort_lauderdale].
+My name is Marcos Vladimir López Castellanos and I'm a software developer based in [Boca Raton, Florida][wiki_boca_raton].
 I graduated from [Florida Atlantic University][wiki_fau] in 2014 with a Bachelor's degree in [Computer Science][fau_computer_science].
 Nowadays I mainly work with JavaScript, C#, and T-SQL but I'm also fluent in many other programing languages.
 
@@ -9,6 +9,7 @@ On my free time I like to play and compose music, take interesting pictures, lea
 
 To reach me, send an email to: [MarcosLopezC@live.com](mailto:marcoslopezc@live.com).
 
+[wiki_boca_raton]: https://en.wikipedia.org/wiki/Boca_Raton,_Florida
 [wiki_fort_lauderdale]: https://en.wikipedia.org/wiki/Fort_Lauderdale,_Florida
 [wiki_fau]: https://en.wikipedia.org/wiki/Florida_Atlantic_University
 [fau_computer_science]: http://www.ceecs.fau.edu/undergraduate/computer-science/
