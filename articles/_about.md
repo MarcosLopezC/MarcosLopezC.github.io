@@ -1,4 +1,4 @@
-My name is Marcos Vladimir López Castellanos and I'm a software developer based in [Boca Raton, Florida][wiki_boca_raton].
+My name is Marcos Vladimir López Castellanos and I'm a software developer based in [Delray Beach, Florida][wiki_delray_beach].
 I graduated from [Florida Atlantic University][wiki_fau] in 2014 with a Bachelor's degree in Computer Science.
 Nowadays I mainly work with JavaScript, C#, and T-SQL but I'm also fluent in many other programing languages.
 
@@ -9,5 +9,5 @@ On my free time I like to play and compose music, take interesting pictures, lea
 
 Reach me by email at [MarcosLopezC@live.com](mailto:marcoslopezc@live.com).
 
-[wiki_boca_raton]: https://en.wikipedia.org/wiki/Boca_Raton,_Florida
+[wiki_delray_beach]: https://en.wikipedia.org/wiki/Delray_Beach,_Florida
 [wiki_fau]: https://en.wikipedia.org/wiki/Florida_Atlantic_University
