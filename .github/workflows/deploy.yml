@@ -16,13 +16,13 @@ jobs:
           path: git
           ref: master
           
-      - name: Clone
-        run: |
-          git clone git www --no-checkout
-          cd www
-          git checkout --orphan gh-pages
+      - name: Checkout gh-pages
+        uses: actions/checkout@v3
+        with:
+          path: www
+          ref: gh-pages
 
-      - name: Download dependencies
+      - name: Download tools
         run: |
           npm install -g harp
           npm install -g less
@@ -30,11 +30,11 @@ jobs:
       - name: Build
         run: harp git www
           
-      - name: Push files
+      - name: Push
         working-directory: ./www
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m 'Generate website'
-          git push origin -f gh-pages
+          git commit -m 'Generating website'
+          git push
