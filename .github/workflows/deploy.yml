@@ -1,0 +1,40 @@
+name: deploy
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v3
+        with:
+          path: git
+          ref: master
+          
+      - name: Clone
+        run: |
+          git clone git www --no-checkout
+          cd www
+          git checkout --orphan gh-pages
+
+      - name: Download dependencies
+        run: |
+          npm install -g harp
+          npm install -g less
+          
+      - name: Build
+        run: harp git www
+          
+      - name: Push files
+        working-directory: ./www
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m 'Generate website'
+          git push origin -f gh-pages
