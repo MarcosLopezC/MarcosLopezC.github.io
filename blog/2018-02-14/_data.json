@@ -2,6 +2,8 @@
 	"index": {
 		"title": "BALLGAME",
 		"created": "2018-02-14",
-		"summary": "I wrote this back in high school when I was taking a programing class on QBasic..."
+		"meta": {
+			"description": "I wrote this back in high school when I was taking a programing class on QBasic..."
+		}
 	}
 }

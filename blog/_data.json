@@ -1,6 +1,6 @@
 {
 	"index": {
 		"title": "Blog",
-		"layout": "_layout_index"
+		"layout": "../articles/_layout"
 	}
 }
