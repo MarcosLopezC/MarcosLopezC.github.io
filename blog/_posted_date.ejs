@@ -1,0 +1,36 @@
+<%-
+	(function() {
+		if (!created) {
+			return "";
+		}
+
+		var date = new Date(created.replace(/-/g, "/"));
+		
+		var weekday = [
+			"Sunday",
+			"Monday",
+			"Tuesday",
+			"Wednesday",
+			"Thursday",
+			"Friday",
+			"Saturday"
+		];
+
+		var month = [
+			"January",
+			"February",
+			"March",
+			"April",
+			"May",
+			"June",
+			"July",
+			"August",
+			"September",
+			"October",
+			"November",
+			"December"
+		];
+
+		return `<p><em>${weekday[date.getDay()]}, ${month[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}</em></p>`;
+	}());
+%>

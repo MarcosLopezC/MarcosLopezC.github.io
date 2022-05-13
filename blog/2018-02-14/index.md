@@ -1,8 +1,4 @@
-# BALLGAME
-
-_Posted on Wednesday, February 14, 2018_
-
-![Ballgame](/images/blog/20180214/ballgame.png)
+![Ballgame](ballgame.png)
 
 Here is a fun one.
 This is the very first graphical game that I ever wrote; a simple pong clone named `BALLGAME.BAS`.
@@ -16,6 +12,6 @@ but that was enough for me to figure out the rest and get the animation to work.
 
 I was very proud when I got back to class and showed everyone what I had done.
 
-### Download
+## Download
 
-- Source code: [BALLGAME.BAS](/download/BALLGAME.BAS)
+- Source code: [BALLGAME.BAS](BALLGAME.BAS)
