@@ -7,12 +7,12 @@
 		let output = "";
 
 		let writeMeta = function(attributes) {
-			output += "<meta ";
+			output += "<meta";
 
 			Object
 				.keys(attributes)
 				.forEach(key => {
-					output += `${key}="${attributes[key]}"`;
+					output += ` ${key}="${attributes[key]}"`;
 				});
 
 			output += ">\n";
