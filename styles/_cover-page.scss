@@ -1,7 +1,4 @@
 body.cover-page {
-	width: 100vw;
-	height: 100vh;
-
 	$color: #efefef;
 	$background-color: #282c2e;
 	$shadow-color: rgba(0, 0, 0, 0.4);
@@ -9,6 +6,11 @@ body.cover-page {
 	background: $background-color url("/images/cover_page.jpg") no-repeat center center fixed;
 	background-color: $background-color;
 	background-size: cover;
+
+	// This is a hack so the background image shows correctly on mobile.
+	@include media-breakpoint-down(sm) {
+		background-size: 400%;
+	}
 
 	color: $color;
 	text-align: center;
