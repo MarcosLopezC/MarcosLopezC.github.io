@@ -1,4 +1,7 @@
 body.cover-page {
+	width: 100vw;
+	height: 100vh;
+
 	$color: #efefef;
 	$background-color: #282c2e;
 	$shadow-color: rgba(0, 0, 0, 0.4);
@@ -6,10 +9,6 @@ body.cover-page {
 	background: $background-color url("/images/cover_page.jpg") no-repeat center center fixed;
 	background-color: $background-color;
 	background-size: cover;
-
-	@include media-breakpoint-down(md) {
-		background-size: auto 120%;
-	}
 
 	color: $color;
 	text-align: center;
@@ -56,6 +55,7 @@ body.cover-page {
 	nav > ul {
 		margin-top: 3rem;
 		margin-bottom: 3rem;
+		padding: 0;
 		list-style-type: none;
 
 		li {
