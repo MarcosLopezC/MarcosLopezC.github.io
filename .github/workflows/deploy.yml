@@ -24,12 +24,11 @@ jobs:
 
       - name: Download tools
         run: |
-          npm install -g harp
-          npm install -g less
-          
+          npm install -g harp less
+
       - name: Build
         run: harp git www
-          
+
       - name: Push
         working-directory: ./www
         run: |
