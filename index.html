@@ -1,76 +1,280 @@
-<!-- Hi! It's nice of you to check out my code. Let me know if you like it. -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="A software developer by day, musician by night, and photographer on the weekends.">
-<meta name="thumbnail" content="https://www.MarcosLopezC.com/images/profile_thumbnail.webp" />
 <title>Marcos López C.</title>
-<meta property="og:site_name" content="Marcos López C.">
-<meta property="og:title" content="Marcos López C.">
-<meta property="og:description" content="A software developer by day, musician by night, and photographer on the weekends." />
-<meta property="og:image" content="https://www.MarcosLopezC.com/images/profile_thumbnail.webp">
-<meta property="og:url" content="https://www.MarcosLopezC.com">
-<meta property="og:type" content="website" />
-<meta property="og:locale" content="en_US" />
-<link rel="shortcut icon" type="image/png" href="/favicon.png" />
-<link rel="stylesheet" type="text/css" href="/styles/style.css" />
-<script async defer src="/scripts/jquery/jquery-3.6.0.min.js"></script>
-<script async defer src="/scripts/bootstrap/bootstrap.bundle.min.js"></script>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="stylesheet" href="/styles/style.css">
+<script src="/library/bootstrap.bundle.min.js" async></script>
 </head>
-<body class="cover-page">
-<main>
+<body>
+<aside class="hero">
+<header>
+<nav class="navbar navbar-dark navbar-expand-sm">
 <div class="container">
-<h1>
-<span class="text-atom">Marcos V.</span>
-<span class="text-atom">López Castellanos</span>
-</h1>
-<p class="catchphrase">
-<span class="text-atom">A software developer by day,</span>
-<span class="text-atom">musician by night,</span>
-<span class="text-atom">and photographer on the weekends</span>
-</p>
-<nav>
-<ul>
-<li><a href="/articles/about">About</a></li>
-<li><a href="/blog">Blog</a></li>
-</ul>
+<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div id="navbarSupportedContent" class="collapse navbar-collapse justify-content-center">
+<ul class="navbar-nav">
+<li class="nav-item"><a class="nav-link" aria-current="page" href="/">Home</a></li>
+<li class="nav-item"><a class="nav-link" aria-current="page" href="/blog">Blog</a></li>
+<li class="nav-item"><a class="nav-link" aria-current="page" href="/contact">Contact</a></li></ul>
+</div>
+</div>
 </nav>
-<p class="social-icon-container">
-<a href="https://www.linkedin.com/in/MarcosLopezC/" target="_blank" title="LinkedIn">
-<span class="fa-stack">
-<i class="fa-solid fa-circle fa-stack-2x"></i>
-<i class="fa-brands fa-linkedin fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-<a href="https://github.com/MarcosLopezC/" target="_blank" title="GitHub">
-<span class="fa-stack">
-<i class="fa-solid fa-circle fa-stack-2x"></i>
-<i class="fa-brands fa-github fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-<a href="https://www.youtube.com/channel/UCbZDeXkKlq-qfjMZgBdoBgA" target="_blank" title="YouTube">
-<span class="fa-stack">
-<i class="fa-solid fa-circle fa-stack-2x"></i>
-<i class="fa-brands fa-youtube fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-<a href="https://www.youtube.com/user/MarcosLopezMusic" target="_blank" title="YouTube">
-<span class="fa-stack">
-<i class="fa-solid fa-circle fa-stack-2x"></i>
-<i class="fa-solid fa-music fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-<a href="https://www.flickr.com/photos/MarcosLopezCastellanos/" target="_blank" title="flickr">
-<span class="fa-stack">
-<i class="fa-solid fa-circle fa-stack-2x"></i>
-<i class="fa-brands fa-flickr fa-stack-1x fa-inverse"></i>
-</span>
-</a>
+</header>
+<div class="container fs-2">
+<div class="row col-cols">
+<div class="text-center text-lg-start col-lg-8 align-self-center hero-headline">
+<h1 class="display-1 fw-bolder my-3">
+<span class="text-nowrap">Marcos López C.</span>
+</h1>
+<p>
+<span class="text-nowrap">A software developer by day,</span>
+<span class="text-nowrap">musician by night,</span>
+<span class="text-nowrap">photographer on the weekends</span>
 </p>
 </div>
-</main>
+<div class="text-lg-end col-lg-4 align-self-end">
+<picture>
+<source srcset="/images/profile.webp">
+<img src="/images/profile.png" alt="Marcos López C." class="img-fluid">
+</picture>
+</div>
+</div>
+</div>
+</aside>
+<div class="section-wrapper">
+<section class="container my-5">
+<div class="row">
+<h2 class="display-4">About</h2>
+</div>
+<div class="row">
+<p>I&#39;m a software developer with more than 10 years of experience developing web sites, web applications, and web services.
+The scope of my work generally involves writing software for the entire stack of web technologies–all the way from the browser, through the application server, and up to the database.</p>
+</div>
+</section>
+</div>
+<div class="section-wrapper">
+<section class="container my-5">
+<div class="row">
+<h2 class="display-4">Experience</h2>
+</div>
+<div class="work-experience">
+<div>Mar 2023 - Present</div>
+<div>
+<h3>Software Developer</h3>
+<p>Simpli.fi &bull; Full-time</p>
+<div class="row">
+<ul class="badge-list">
+<li>C#</li>
+<li>T-SQL</li>
+<li>Javascript</li>
+<li>Windows</li>
+<li>Linux</li>
+<li>SQL Server</li>
+<li>Vertica</li>
+<li>HTML5</li>
+<li>CSS</li>
+<li>Sass</li>
+<li>jQuery</li>
+<li>AngularJS</li>
+<li>Visual Studio</li>
+<li>Visual Code</li>
+<li>Datadog</li>
+<li>Loggly</li>
+<li>TeamCity</li>
+<li>Git</li>
+<li>BitBucket</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="work-experience">
+<div>Apr 2018 - Mar 2023</div>
+<div>
+<h3>Software Developer</h3>
+<p>Bidtellect &bull; Full-time</p>
+<div class="row">
+<ul class="badge-list">
+<li>C#</li>
+<li>T-SQL</li>
+<li>Javascript</li>
+<li>Windows</li>
+<li>Linux</li>
+<li>SQL Server</li>
+<li>Vertica</li>
+<li>HTML5</li>
+<li>CSS</li>
+<li>Sass</li>
+<li>jQuery</li>
+<li>AngularJS</li>
+<li>Visual Studio</li>
+<li>Visual Code</li>
+<li>Datadog</li>
+<li>Loggly</li>
+<li>TeamCity</li>
+<li>Git</li>
+<li>BitBucket</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="work-experience">
+<div>Mar 2015 - Apr 2018</div>
+<div>
+<h3>Software Developer</h3>
+<p>Cendyn &bull; Full-time</p>
+<div class="row">
+<ul class="badge-list">
+<li>C#</li>
+<li>T-SQL</li>
+<li>Javascript</li>
+<li>Windows</li>
+<li>SQL Server</li>
+<li>HTML</li>
+<li>CSS</li>
+<li>Less</li>
+<li>jQuery</li>
+<li>Visual Studio</li>
+<li>SVN</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="work-experience">
+<div>Jan 2013 - Mar 2015</div>
+<div>
+<h3>Programmer</h3>
+<p>Mocsie Systems &bull; Freelance</p>
+<div class="row">
+<ul class="badge-list">
+<li>C#</li>
+<li>T-SQL</li>
+<li>Windows</li>
+<li>SQL Server</li>
+<li>HTML</li>
+<li>CSS</li>
+<li>Visual Studio</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class="section-wrapper">
+<section class="container my-5">
+<div class="row">
+<h2 class="display-4">Skills</h2>
+</div>
+<div class="row">
+<p>Languages</p>
+<ul class="badge-list">
+<li>C#</li>
+<li>JavaScript</li>
+<li>C</li>
+<li>C++</li>
+<li>Python</li>
+<li>SQL</li>
+<li>T-SQL</li>
+<li>PHP</li>
+<li>HTML5</li>
+<li>CSS3</li>
+<li>Sass</li>
+<li>Visual Basic</li>
+<li>Assembly</li>
+</ul>
+</div>
+<div class="row">
+<p>Database Technologies</p>
+<ul class="badge-list">
+<li>Microsoft SQL Server</li>
+<li>PostgreSQL</li>
+<li>Vertica</li>
+<li>MySQL</li>
+<li>Oracle Database</li>
+</ul>
+</div>
+<div class="row">
+<p>Version Control Systems</p>
+<ul class="badge-list">
+<li>Git</li>
+<li>SVN</li>
+<li>Bazaar</li>
+<li>CVS</li>
+</ul>
+</div>
+<div class="row">
+<p>Cloud Platforms</p>
+<ul class="badge-list">
+<li>Oracle Cloud</li>
+<li>AWS</li>
+</ul>
+</div>
+</section>
+</div>
+<div class="section-wrapper">
+<section class="container my-5">
+<div class="row">
+<h2 class="display-4">Interests</h2>
+</div>
+<div class="row">
+<ul class="badge-list">
+<li>Photography</li>
+<li>Programming</li>
+<li>Open Source</li>
+<li>UI/UX</li>
+<li>Web Design</li>
+<li>Typography</li>
+<li>Graphic Design</li>
+<li>Artificial Intelligence</li>
+<li>Reading</li>
+<li>Music</li>
+<li>Piano</li>
+<li>Rubik's Cubes</li>
+<li>Aviation</li>
+<li>Flight Simulator</li>
+<li>Gaming</li>
+<li>Finance</li>
+<li>Technology</li>
+<li>Travel</li>
+</ul>
+</div>
+</section>
+</div>
+<footer>
+<div class="container">
+<div class="row gy-3">
+<div class="col-12 col-sm-6 text-center text-sm-end">
+<ul class="social">
+<li>
+<a href="https://www.linkedin.com/in/MarcosLopezC/"><i class="fa-brands fa-linkedin"></i></a>
+</li>
+<li>
+<a href="https://github.com/MarcosLopezC/"><i class="fa-brands fa-github"></i></a>
+</li>
+<li>
+<a href="https://www.youtube.com/channel/UCbZDeXkKlq-qfjMZgBdoBgA"><i class="fa-brands fa-youtube"></i></a>
+</li>
+<li>
+<a href="https://www.youtube.com/user/MarcosLopezMusic"><i class="fa-solid fa-music"></i></a>
+</li>
+<li>
+<a href="https://www.flickr.com/photos/MarcosLopezCastellanos/"><i class="fa-brands fa-flickr"></i></a>
+</li>
+<li>
+<a href="mailto:MarcosLopezC@live.com"><i class="fa fa-envelope"></i></a>
+</li>
+</ul>
+</div>
+<div class="col-12 col-sm-6 text-center text-sm-start order-sm-first">
+<span class="text-muted fw-light fs-6">&copy; 2023 Marcos López C.</span>
+</div>
+</div>
+</div>
+</footer>
 </body>
 </html>

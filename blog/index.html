@@ -1,4 +1,3 @@
-<!-- Hi! It's nice of you to check out my code. Let me know if you like it. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,44 +6,73 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Blog - Marcos López C.</title>
 
-<link rel="shortcut icon" type="image/png" href="/favicon.png" />
-<link rel="stylesheet" type="text/css" href="/styles/style.css" />
-<link rel="stylesheet" type="text/css" href="/styles/highlightjs.css" />
-<script async defer src="/scripts/jquery/jquery-3.6.0.min.js"></script>
-<script async defer src="/scripts/bootstrap/bootstrap.bundle.min.js"></script>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="stylesheet" href="/styles/style.css">
+<script src="/library/bootstrap.bundle.min.js" async></script>
 </head>
-<body class="article-page">
-<nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+<body class="blog">
+<header>
+<nav class="navbar navbar-dark navbar-expand-sm">
 <div class="container">
-<a class="navbar-brand" href="/">Marcos López C.</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+<a class="navbar-brand fw-semibold" href="/">Marcos López C.</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
 </button>
-<div class="collapse navbar-collapse" id="navbarNavDropdown">
-<ul class="navbar-nav ms-auto">
-<li class="nav-item"><a class="nav-link" href="/articles/about">About</a></li>
-<li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
-</ul>
+<div id="navbarSupportedContent" class="collapse navbar-collapse justify-content-end">
+<ul class="navbar-nav">
+<li class="nav-item"><a class="nav-link" aria-current="page" href="/">Home</a></li>
+<li class="nav-item"><a class="nav-link" aria-current="page" href="/blog">Blog</a></li>
+<li class="nav-item"><a class="nav-link" aria-current="page" href="/contact">Contact</a></li></ul>
 </div>
 </div>
 </nav>
-<main>
+</header><main class="blog-list mt-5">
+<div class="container mb-3">
+<h1 class="display-3">Latest posts</h1>
+</div>
 <article>
-<h2>2018</h2>
-<ul>
-<li>
-<p><a href="2018-02-14">Feb 14 - BALLGAME</a></p>
-</li>
-</ul>
-
+<div class="blog-entry">
+<div class="container">
+<h2 class="blog-title">BALLGAME</h2>
+<p><small class="text-muted">
+Posted on February 14, 2018
+</small></p>
+<p>I wrote this back in high school when I was taking a programming class on QBasic...</p>
+<a href="2018-02-14">Read more</a>
+</div>
+</div>
 </article>
 </main>
 <footer>
-<div class="legal">
-<p>&copy; 2022 Marcos López C.</p>
+<div class="container">
+<div class="row gy-3">
+<div class="col-12 col-sm-6 text-center text-sm-end">
+<ul class="social">
+<li>
+<a href="https://www.linkedin.com/in/MarcosLopezC/"><i class="fa-brands fa-linkedin"></i></a>
+</li>
+<li>
+<a href="https://github.com/MarcosLopezC/"><i class="fa-brands fa-github"></i></a>
+</li>
+<li>
+<a href="https://www.youtube.com/channel/UCbZDeXkKlq-qfjMZgBdoBgA"><i class="fa-brands fa-youtube"></i></a>
+</li>
+<li>
+<a href="https://www.youtube.com/user/MarcosLopezMusic"><i class="fa-solid fa-music"></i></a>
+</li>
+<li>
+<a href="https://www.flickr.com/photos/MarcosLopezCastellanos/"><i class="fa-brands fa-flickr"></i></a>
+</li>
+<li>
+<a href="mailto:MarcosLopezC@live.com"><i class="fa fa-envelope"></i></a>
+</li>
+</ul>
 </div>
-</footer>
-<script src="/scripts/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-</body>
+<div class="col-12 col-sm-6 text-center text-sm-start order-sm-first">
+<span class="text-muted fw-light fs-6">&copy; 2023 Marcos López C.</span>
+</div>
+</div>
+</div>
+</footer></body>
 </html>
