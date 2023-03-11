@@ -1,0 +1,17 @@
+body.blog {
+	div.blog-content {
+		& > p:first-of-type > img {
+			width: 100%;
+		}
+	}
+
+	.blog-list {
+		div.blog-entry {
+			@extend .py-3;
+
+			&:nth-child(odd) {
+				background-color: lighten($body-bg, $amount: 5%);
+			}
+		}
+	}
+}

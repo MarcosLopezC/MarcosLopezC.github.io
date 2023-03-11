@@ -1,0 +1,53 @@
+<%-
+	(function() {
+		if (typeof meta === "undefined") {
+			return;
+		}
+
+		let output = "";
+
+		let writeMeta = function(attributes) {
+			output += "<meta";
+
+			Object
+				.keys(attributes)
+				.forEach(key => {
+					output += ` ${key}="${attributes[key]}"`;
+				});
+
+			output += ">\n";
+		};
+
+		if (typeof title === "string") {
+			writeMeta({
+				property: "og:title",
+				content: title
+			});
+		}
+
+		if (meta.description) {
+			writeMeta({
+				name: "description",
+				content: meta.description
+			});
+			writeMeta({
+				property: "og:description",
+				content: meta.description
+			});
+		}
+
+		if (meta.image) {
+			writeMeta({
+				property: "og:image",
+				content: meta.image
+			});
+		}
+
+		writeMeta({
+			property: "og:locale",
+			content: "en_US"
+		});
+
+		return output;
+	}());
+%>

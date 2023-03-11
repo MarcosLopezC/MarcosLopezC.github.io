@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title><%= partial("../_title"); %></title>
+
+	<%- partial("../_meta"); %>
+	<%- partial("../_head_import"); %>
+</head>
+
+<body class="blog">
+
+<%- partial("../_header"); _%>
+
+<main class="container my-5">
+	<article class="row">
+		<h1 class="display-1"><%= title %></h1>
+		<p><small class="text-muted">Posted on <%- partial("../_snippets/date", { date: created }) _%></small></p>
+		<div class="blog-content mt-3">
+			<%- yield _%>
+		</div>
+	</article>
+</main>
+
+<%- partial("../_footer"); _%>
+
+</body>
+
+</html>

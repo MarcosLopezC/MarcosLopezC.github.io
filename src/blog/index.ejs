@@ -1,0 +1,34 @@
+<%-
+	(function() {
+		const blogItems = Object.keys(public.blog)
+			.filter(x => !x.startsWith("_"))
+			.map(item => public.blog[item]._data.index)
+			.filter(x => x.title && x.created);
+
+		let content = "";
+
+		const writeLine = function(value) {
+			content += value + "\n";
+		};
+
+		blogItems
+			.sort()
+			.reverse()
+			.forEach(item => {
+				writeLine(`<div class="blog-entry">`);
+				writeLine(`<div class="container">`);
+
+				writeLine(`<h2 class="blog-title">${item.title}</h2>`);
+				writeLine(`<p><small class="text-muted">`);
+				writeLine(`Posted on ${partial("../_snippets/date", { date: item.created })}`);
+				writeLine(`</small></p>`);
+				writeLine(`<p>${item.meta.description}</p>`);
+				writeLine(`<a href="${item.created}">Read more</a>`)
+
+				writeLine("</div>");
+				writeLine("</div>");
+			});
+
+		return content;
+	}());
+%>

@@ -1,0 +1,52 @@
+// Theme colors
+$primary:       #2a83cb;
+$secondary:     desaturate($primary, 10%);
+$success:       #066C00;
+$info:          #66006C;
+$warning:       #D1B560;
+$danger:        #723227;
+$light:         #D4D4D4;
+$dark:          #1E1E1E;
+
+//$enable-gradients: true;
+$enable-shadows: true;
+
+//$gradient: linear-gradient(160deg, rgba($light, .1), rgba($light, 0));
+
+$border-radius: 0.15rem;
+$border-radius-sm: calc($border-radius / 2);
+$border-radius-lg: $border-radius * 2;
+$border-radius-xl: $border-radius-lg * 2;
+$border-radius-2xl: $border-radius-xl * 2;
+
+$font-family-sans-serif: Inter, -apple-system, system-ui, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace: Consolas, SFMono-Regular, Menlo, Monaco, "Liberation Mono", "Courier New", monospace;
+
+$link-decoration: none;
+$link-hover-decoration: underline;
+
+$headings-color: #fff;
+$font-size-base: 1.2rem;
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 1.5;
+$h3-font-size: $font-size-base * 1.25;
+$h4-font-size: $font-size-base * 1.1;
+$h5-font-size: $font-size-base * 1.0;
+$h6-font-size: $font-size-base * 0.9;
+
+$body-color: $light;
+$body-bg: $dark;
+
+$link-shade-percentage: 5%;
+
+$btn-color: $light;
+
+@import "../../library/_bootstrap/bootstrap.scss";
+
+.badge {
+	border-radius: $border-radius-pill;
+}
+
+.navbar-toggler {
+	border: none;
+}

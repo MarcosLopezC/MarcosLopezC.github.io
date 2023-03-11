@@ -22,12 +22,14 @@ jobs:
           path: www
           ref: gh-pages
 
-      - name: Download tools
+      - name: Download dependencies
+        working-directory: ./git
         run: |
-          npm install -g harp less
+          npm install
+          sh copy-library-files.sh
 
       - name: Build
-        run: harp git www
+        run: harp git/src www
 
       - name: Push
         working-directory: ./www

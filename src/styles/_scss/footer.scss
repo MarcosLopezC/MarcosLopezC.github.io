@@ -1,0 +1,22 @@
+footer {
+	background-color: #111;
+	margin-top: auto;
+
+	& > div {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	ul.social {
+		@extend .list-inline;
+		margin: 0;
+
+		& > li {
+			@extend .list-inline-item;
+
+			& > a {
+				@extend .text-muted;
+			}
+		}
+	}
+}

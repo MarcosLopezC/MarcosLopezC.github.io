@@ -1,0 +1,26 @@
+ul.badge-list {
+	list-style: none;
+
+	@extend .text-center;
+	@extend .text-md-start;
+
+	&-lg {
+		font-size: 2rem;
+	}
+
+	& > li {
+		@extend .badge;
+		@extend .bg-primary;
+		@extend .my-1;
+
+		padding: 0.5rem 1rem;
+
+		a {
+			color: $light;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}

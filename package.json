@@ -1,0 +1,23 @@
+{
+  "name": "MarcosLopezC.github.io",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "scripts": {
+    "install": "npm install -g harp",
+    "build": "harp src dist",
+    "dev": "harp src --port 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcosLopezC/MarcosLopezC.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MarcosLopezC/MarcosLopezC.github.io/issues"
+  },
+  "homepage": "https://github.com/MarcosLopezC/MarcosLopezC.github.io#readme",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.1",
+    "bootstrap": "^5.2.2",
+    "font-awesome": "^4.7.0"
+  }
+}

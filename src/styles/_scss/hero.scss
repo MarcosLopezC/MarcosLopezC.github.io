@@ -1,0 +1,30 @@
+aside.hero {
+	$gradient-color-end: #3776a4;
+	$gradient-color-start: desaturate(shift-color($gradient-color-end, 30%), 2%);
+
+	background-color: lighten($primary, 10%);
+	background-image: url("/images/hero_background.svg"), linear-gradient(180deg,
+		$gradient-color-start 10%,
+		$gradient-color-end 60%
+	);
+
+	overflow: hidden;
+	line-height: 2rem;
+
+	@include media-breakpoint-up(lg) {
+		background: url("/images/hero_background.svg"), linear-gradient(110deg,
+			$gradient-color-start 55%,
+			$gradient-color-end 80%
+		);
+	}
+
+	div.hero-headline {
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+
+		@include media-breakpoint-up(lg) {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+}

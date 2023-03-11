@@ -1,0 +1,21 @@
+@mixin font-face-inter-varient ($font-weight) {
+	@font-face {
+		font-family: "Inter";
+		font-style: normal;
+		font-display: swap;
+		font-weight: $font-weight;
+		src:
+			url("/fonts/Inter/inter-v12-latin-#{$font-weight}.woff2") format('woff2'),
+			url("/fonts/Inter/inter-v12-latin-#{$font-weight}.woff") format('woff');
+	}
+}
+
+@include font-face-inter-varient(100);
+@include font-face-inter-varient(200);
+@include font-face-inter-varient(300);
+@include font-face-inter-varient(400);
+@include font-face-inter-varient(500);
+@include font-face-inter-varient(600);
+@include font-face-inter-varient(700);
+@include font-face-inter-varient(800);
+@include font-face-inter-varient(900);
