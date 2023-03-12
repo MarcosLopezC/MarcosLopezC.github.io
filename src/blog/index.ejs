@@ -1,9 +1,22 @@
 <%-
 	(function() {
+		const getBlogData = (folderName) => {
+			const indexMetadata = public.blog[folderName]._data.index;
+			const data = {};
+
+			data.url = folderName;
+
+			Object.keys(indexMetadata).forEach(element => {
+				data[element] = indexMetadata[element];
+			});
+
+			return data;
+		};
+
 		const blogItems = Object.keys(public.blog)
 			.filter(x => !x.startsWith("_"))
-			.map(item => public.blog[item]._data.index)
-			.filter(x => x.title && x.created);
+			.map(getBlogData)
+			.filter(x => x && x.title && x.created);
 
 		let content = "";
 
@@ -23,7 +36,7 @@
 				writeLine(`Posted on ${partial("../_snippets/date", { date: item.created })}`);
 				writeLine(`</small></p>`);
 				writeLine(`<p>${item.meta.description}</p>`);
-				writeLine(`<a href="${item.created}">Read more</a>`)
+				writeLine(`<a href="${item.url}">Read more</a>`)
 
 				writeLine("</div>");
 				writeLine("</div>");
