@@ -1,0 +1,17 @@
+div.callout {
+	padding: 1rem;
+	border-left: 3px solid #000;
+	border-top-right-radius: $border-radius;
+	border-bottom-right-radius: $border-radius;
+
+	*:last-child {
+		margin-bottom: 0;
+	}
+
+	@each $color, $value in $theme-colors {
+		&.callout-#{$color} {
+			border-left-color: $value;
+			background-color: shade-color($value, 60%);
+		}
+	}
+}
