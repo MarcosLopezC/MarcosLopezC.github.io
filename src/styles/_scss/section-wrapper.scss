@@ -1,5 +1,5 @@
 div.section-wrapper {
 	&:nth-child(odd) {
-		background-color: mix(lighten($body-bg, 5%), $primary, 95%);
+		background-color: mix(lighten($body-bg, 4%), $primary, 96%);
 	}
 }
