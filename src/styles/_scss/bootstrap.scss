@@ -35,6 +35,8 @@ $h6-font-size: $font-size-base * 0.9;
 
 $link-shade-percentage: 5%;
 
+$body-bg: $dark;
+
 @import "../../library/_bootstrap/bootstrap.scss";
 
 .badge {

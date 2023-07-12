@@ -22,6 +22,10 @@ aside.hero {
 		padding-top: 1.5rem;
 		padding-bottom: 1.5rem;
 
+		h1 {
+			color: $light;
+		}
+
 		@include media-breakpoint-up(lg) {
 			padding-top: 0;
 			padding-bottom: 0;
