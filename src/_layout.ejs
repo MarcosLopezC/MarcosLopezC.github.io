@@ -1,17 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 	<head>
 		<%- partial("_googleAnalytics") _%>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Marcos López C.</title>
+		<title><%= partial("_title") %></title>
 
-		<meta name="title" content="Marcos López C.">
+		<meta name="title" content="<%= partial("_title") %>">
 		<meta name="description" content=" A software developer by day, musician by night, photographer on the weekends.">
 
 		<meta property="og:type" content="website">
 		<meta property="og:url" content="https://www.marcoslopezc.com/">
-		<meta property="og:title" content="Marcos López C.">
+		<meta property="og:title" content="<%= partial("_title") %>">
 		<meta property="og:description" content="A software developer by day, musician by night, photographer on the weekends.">
 		<meta property="og:image" content="https://www.marcoslopezc.com/images/thumbnail.png">
 
