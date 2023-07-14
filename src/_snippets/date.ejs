@@ -1,5 +1,5 @@
 <%-
-	(function() {
+	(() => {
 		if (!date) {
 			return "";
 		}
@@ -22,5 +22,5 @@
 		];
 
 		return `${month[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
-	}());
+	})();
 _%>

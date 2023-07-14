@@ -1,0 +1,79 @@
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<%-
+	(() => {
+		if (typeof meta === "undefined") {
+			meta = {};
+		}
+
+		const baseUrl = "https://www.marcoslopezc.com";
+
+		const output = [];
+
+		const writeMeta = (attributes) => {
+			output.push("<meta");
+
+			Object
+				.keys(attributes)
+				.forEach(key => {
+					output.push(` ${key}="${attributes[key]}"`);
+				});
+
+			output.push(">\n");
+		};
+
+		writeMeta({
+			property: "og:title",
+			content: meta.title || partial("title"),
+		});
+
+		if (meta.description) {
+			writeMeta({
+				name: "description",
+				content: meta.description,
+			});
+			writeMeta({
+				property: "og:description",
+				content: meta.description,
+			});
+		}
+
+		writeMeta({
+			property: "og:image",
+			content: meta.image || "https://www.marcoslopezc.com/images/thumbnail.png",
+		});
+
+		writeMeta({
+			property: "og:type",
+			content: meta.type || "website",
+		});
+
+		writeMeta({
+			property: "og:locale",
+			content: meta.locale || "en_US",
+		});
+
+		const normalizePath = (path) => {
+			const last = path[path.length - 1];
+
+			if (last === "index") {
+				return path.slice(0, -1).join("/");
+			}
+			else {
+				return path.join("/");
+			}
+		};
+
+		const path = `${baseUrl}/${normalizePath(current.path)}`;
+
+		writeMeta({
+			property: "og:url",
+			content: path,
+		});
+
+		output.push(`<link rel="canonical" href="${path}">\n`);
+
+		return output.join("");
+	})();
+%>

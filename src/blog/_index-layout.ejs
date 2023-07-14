@@ -2,24 +2,19 @@
 <html lang="en" data-bs-theme="dark">
 
 <head>
-	<%- partial("../_googleAnalytics") _%>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<title><%= partial("../_title"); %></title>
-
+	<%- partial("../_snippets/googleAnalytics"); _%>
+	<%- partial("../_snippets/meta"); _%>
 	<meta name="robots" content="noindex">
-	<%- partial("../_meta"); %>
-	<%- partial("../_head_import"); %>
+	<title><%= partial("../_snippets/title"); _%></title>
+	<%- partial("../_snippets/headImport"); _%>
 </head>
 
 <body class="blog">
 
-<%- partial("../_header"); _%>
+<%- partial("../_snippets/header"); _%>
 
-<main class="blog-list mt-5">
-	<div class="container mb-3">
+<main class="blog-list">
+	<div class="container my-5">
 		<h1 class="display-3">Latest posts</h1>
 	</div>
 	<article>
@@ -27,7 +22,7 @@
 	</article>
 </main>
 
-<%- partial("../_footer"); _%>
+<%- partial("../_snippets/footer"); _%>
 
 </body>
 

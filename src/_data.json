@@ -1,4 +1,9 @@
 {
+	"index": {
+		"meta":{
+			"description": "A software developer by day, musician by night, photographer on the weekends."
+		}
+	},
 	"contact": {
 		"title": "Contact"
 	}

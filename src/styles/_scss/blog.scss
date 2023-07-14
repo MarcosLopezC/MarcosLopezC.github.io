@@ -12,10 +12,10 @@ body.blog {
 	.blog-list {
 		div.blog-entry {
 			@extend .py-3;
+		}
 
-			&:nth-child(odd) {
-				background-color: lighten($body-bg, $amount: 5%);
-			}
+		div.container:last-child hr {
+			display: none;
 		}
 	}
 }

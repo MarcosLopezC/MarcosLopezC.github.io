@@ -1,5 +1,5 @@
 <%-
-	(function() {
+	(() => {
 		const getBlogData = (folderName) => {
 			const indexMetadata = public.blog[folderName]._data.index;
 			const data = {};
@@ -18,18 +18,19 @@
 			.map(getBlogData)
 			.filter(x => x && x.title && x.created);
 
-		let content = "";
+		const content = [];
 
-		const writeLine = function(value) {
-			content += value + "\n";
+		const writeLine = (value) => {
+			content.push(value);
+			content.push("\n");
 		};
 
 		blogItems
 			.sort()
 			.reverse()
 			.forEach(item => {
-				writeLine(`<div class="blog-entry">`);
 				writeLine(`<div class="container">`);
+				writeLine(`<div class="blog-entry">`);
 
 				writeLine(`<h2 class="blog-title">${item.title}</h2>`);
 				writeLine(`<p><small class="text-muted">`);
@@ -39,9 +40,10 @@
 				writeLine(`<a href="${item.url}">Read more</a>`)
 
 				writeLine("</div>");
+				writeLine("<hr>")
 				writeLine("</div>");
 			});
 
-		return content;
-	}());
+		return content.join("");
+	})();
 %>

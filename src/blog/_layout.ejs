@@ -2,20 +2,15 @@
 <html lang="en" data-bs-theme="dark">
 
 <head>
-	<%- partial("../_googleAnalytics") _%>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<title><%= partial("../_title"); %></title>
-
-	<%- partial("../_meta"); %>
-	<%- partial("../_head_import"); %>
+	<%- partial("../_snippets/googleAnalytics") _%>
+	<%- partial("../_snippets/meta"); %>
+	<title><%= partial("../_snippets/title"); %></title>
+	<%- partial("../_snippets/headImport"); %>
 </head>
 
 <body class="blog">
 
-<%- partial("../_header"); _%>
+<%- partial("../_snippets/header"); _%>
 
 <main class="container my-5">
 	<article class="row">
@@ -27,7 +22,7 @@
 	</article>
 </main>
 
-<%- partial("../_footer"); _%>
+<%- partial("../_snippets/footer"); _%>
 
 </body>
 
