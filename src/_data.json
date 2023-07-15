@@ -6,5 +6,10 @@
 	},
 	"contact": {
 		"title": "Contact"
+	},
+	"404": {
+		"meta": {
+			"noIndex": true
+		}
 	}
 }

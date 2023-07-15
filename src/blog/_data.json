@@ -1,6 +1,9 @@
 {
 	"index": {
 		"title": "Blog",
-		"layout": "_index-layout.ejs"
+		"layout": "_index-layout.ejs",
+		"meta": {
+			"noIndex": true
+		}
 	}
 }
