@@ -37,6 +37,9 @@ $link-shade-percentage: 5%;
 
 $body-bg: $dark;
 
+$code-color: lighten($light, 5%);
+$kbd-bg: lighten($dark, $amount: 20%);
+
 @import "../../library/_bootstrap/bootstrap.scss";
 
 .badge {

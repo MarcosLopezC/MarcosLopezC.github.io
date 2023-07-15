@@ -5,10 +5,9 @@ pre {
 	overflow-x: auto;
 }
 
-p > code {
+:not(pre) > code {
 	background-color: lighten($dark, $amount: 20%);
 	border-radius: $border-radius;
-	padding: .2rem .4rem;
 	word-break: keep-all;
-	color: #eee;
+	padding: 1px 4px;
 }
