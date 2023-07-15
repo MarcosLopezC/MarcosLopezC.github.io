@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZB54YX9LX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-7ZB54YX9LX');
+</script><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="How to use Tar in Linux - Marcos López C.">
+<meta name="description" content="Tar is an archive format commonly used in Linux for bundling and organizing files and directories.">
+<meta property="og:description" content="Tar is an archive format commonly used in Linux for bundling and organizing files and directories.">
+<meta property="og:image" content="https://www.marcoslopezc.com/images/thumbnail.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://www.marcoslopezc.com/blog/2023-07-14_how_to_use_tar_in_linux">
+<link rel="canonical" href="https://www.marcoslopezc.com/blog/2023-07-14_how_to_use_tar_in_linux">
+
+<title>How to use Tar in Linux - Marcos López C.</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="stylesheet" href="/styles/style.css">
+<script src="/library/bootstrap.bundle.min.js" async></script>
+</head>
+<body class="blog">
+<header>
+<nav class="navbar navbar-expand-sm">
+<div class="container">
+<a class="navbar-brand fw-semibold" href="/">Marcos López C.</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div id="navbarSupportedContent" class="collapse navbar-collapse justify-content-end">
+<ul class="navbar-nav">
+<li class="nav-item"><a class="nav-link" aria-current="page" href="/">Home</a></li>
+<li class="nav-item"><a class="nav-link" aria-current="page" href="/blog">Blog</a></li>
+<li class="nav-item"><a class="nav-link" aria-current="page" href="/contact">Contact</a></li></ul>
+</div>
+</div>
+</nav>
+</header><main class="container my-5">
+<article class="row">
+<h1 class="display-1">How to use Tar in Linux</h1>
+<p><small class="text-muted">Posted on July 14, 2023</small></p>
+<div class="blog-content mt-3">
+<p>Tar, short for <em>tape archive</em>, is an archive format commonly used in Linux for bundling and organizing files and directories.</p>
+<h2>About the Tar Format</h2><p>Tar files have a simple structure.
+They consist of a series of file entries concatenated together.
+Each file entry represents a file or directory and contains metadata about the file, such as:</p>
+<ul>
+<li>name</li>
+<li>permissions</li>
+<li>owner</li>
+<li>group</li>
+<li>timestamp</li>
+<li>file size</li>
+</ul>
+<p>The structure of a file entry typically includes the following components:</p>
+<ol>
+<li><p><strong>Header:</strong> The header section contains information about the file, including its name, permissions, timestamps, owner, group, file size, and other metadata.
+The header is a fixed-size block that precedes each file entry.</p>
+</li>
+<li><p><strong>File Data:</strong> Following the header is the actual file data, which represents the content of the file.
+The file data section varies in size depending on the file&#39;s size.</p>
+</li>
+<li><p><strong>Padding:</strong> Tar files use padding to align file data on block boundaries.
+Padding ensures that each file entry occupies a multiple of a specific block size, typically 512 bytes.</p>
+</li>
+<li><p><strong>End of File Markers:</strong> Tar files often end with two empty 512-byte blocks, indicating the end of the archive.</p>
+</li>
+</ol>
+<h2>Creating a Tar File</h2><p>To create a Tar file, use the <code>tar</code> command with the <code>-cvf</code> flags followed by the desired name of the Tar file and the files or directories to include.
+For example, to create a Tar file named <code>backup.tar</code> containing two files named <code>contacts.txt</code> and <code>config.txt</code>, run the following command:</p>
+<pre><code class="language-sh">tar -cvf backup.tar contacts.txt config.txt
+</code></pre>
+<p>Let&#39;s have a look at the flags:</p>
+<ul>
+<li><code>-c</code> (or <code>--create</code>) tells <code>tar</code> to create a new archive.</li>
+<li><code>-v</code> (or <code>--verbose</code>) tells <code>tar</code> to display detailed information about the files being processed.
+When used with the <code>-c</code> flag, the verbose mode shows the names of the files being added to the archive.</li>
+<li><code>-f</code> (or <code>--file</code>) tells <code>tar</code> the file name or device where the Tar archive will be stored.
+This flag is necessary when creating or manipulating Tar files.</li>
+</ul>
+<h2>Extracting Files From a Tar File</h2><p>To extract the contents of a Tar file, use the <code>tar</code> command with the <code>xvf</code> flags followed by the name of the Tar file.
+For example, to extract the file created in the previous section, run the following command:</p>
+<pre><code class="language-sh">tar -xvf backup.tar
+</code></pre>
+<p>Let&#39;s have a look at this new flag:</p>
+<ul>
+<li><code>-x</code> (or <code>--extract</code>) tells <code>tar</code> to extract the files from the Tar archive.</li>
+</ul>
+<p>By default, the files will be extracted in the current working directory.</p>
+<p>To specify a different extraction directory, use the <code>-C</code> (or <code>--directory</code>) flag followed by the desired path. For example, to extract the files to the home directory, run the following command:</p>
+<pre><code class="language-sh">tar -xvf backup.tar -C ~/
+</code></pre>
+<h2>Tar File Compression</h2><p>A Tar file is effectively the result of concatenating multiple file entries, each containing metadata and file data, in a structured format.
+To save on disk space, this file can be compressed using various compression algorithms such as GZIP or BZIP2, resulting in a compressed Tar archive.</p>
+<p>For example, to create a compressed Tar file, the <code>tar</code> command can be combined with the <code>gzip</code> command:</p>
+<pre><code class="language-sh">tar -cvf backup.tar contacts.txt config.txt | gzip &gt; backup.tar.gz
+</code></pre>
+<p>However, there is an easier way to do this.
+When creating a Tar file, use the <code>-z</code> flag to tell <code>tar</code> to use GZIP compression.
+For example, this command will result in the same output as the command above:</p>
+<pre><code class="language-sh">tar -cvzf backup.tar.gz contacts.txt config.txt
+</code></pre>
+<p>Similarly, to use BZIP2 compression, use the <code>-j</code> flag:</p>
+<pre><code class="language-sh">tar -cvjf backup.tar.bz2 contacts.txt config.txt
+</code></pre>
+<p>To decompress a Tar file, the <code>tar</code> command can automatically detect the compression format used from the file name extension.
+For example:</p>
+<pre><code class="language-sh">tar -xf backup.tar.gz
+</code></pre>
+<p>In this case, the <code>tar</code> command recognizes the <code>.tar.gz</code> extension and automatically applies the appropriate decompression (in this case, GZIP) before extracting the files.</p>
+<p>If a Tar file does not have an extension, the compression format cannot be determined solely based on its name.
+In these cases, the <code>tar</code> command needs to be provided with the appropriate compression flag.
+For example, to extract a Tar file named <code>backup</code> compressed using GZIP, use the following command:</p>
+<pre><code class="language-sh">tar -xzf backup
+</code></pre>
+<h2>Inspecting a Tar File</h2><p>To see the contents of a Tar file, use the <code>tar</code> command with the <code>-tf</code> flag.
+The <code>-t</code> (or <code>--list</code>) flag tells <code>tar</code> to list the contents of the Tar file without extracting them.
+For example, to see the contents of Tar file from the previous examples, run the following command:</p>
+<pre><code class="language-sh">tar -tf backup.tar
+</code></pre>
+<h2>Conclusion</h2><p>The <code>tar</code> command has many more options that I won&#39;t explore here.
+But this should be enough to get started using Tar in Linux.</p>
+</div>
+</article>
+</main>
+<footer>
+<div class="container">
+<div class="row gy-3">
+<div class="col-12 col-sm-6 text-center text-sm-end">
+<ul class="social">
+<li>
+<a rel="noopener noreferrer nofollow" target="_blank" href="https://www.linkedin.com/in/MarcosLopezC/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+</li>
+<li>
+<a rel="noopener noreferrer nofollow" target="_blank" href="https://github.com/MarcosLopezC/" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+</li>
+<li>
+<a rel="noopener noreferrer nofollow" target="_blank" href="https://www.youtube.com/channel/UCbZDeXkKlq-qfjMZgBdoBgA" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+</li>
+<li>
+<a rel="noopener noreferrer nofollow" target="_blank" href="https://www.youtube.com/user/MarcosLopezMusic" aria-label="Music"><i class="fa-solid fa-music"></i></a>
+</li>
+<li>
+<a rel="noopener noreferrer nofollow" target="_blank" href="https://www.flickr.com/photos/MarcosLopezCastellanos/" aria-label="Flickr"><i class="fa-brands fa-flickr"></i></a>
+</li>
+<li>
+<a href="mailto:contact@marcoslopezc.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
+</li>
+</ul>
+</div>
+<div class="col-12 col-sm-6 text-center text-sm-start order-sm-first">
+<span class="text-muted fw-light fs-6">&copy; 2023 Marcos López C.</span>
+</div>
+</div>
+</div>
+</footer></body>
+</html>
