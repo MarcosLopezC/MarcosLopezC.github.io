@@ -1,9 +1,24 @@
+<%
+	const coverImageUrl = (() => {
+		if (typeof coverImage !== "object") {
+			return undefined;
+		}
+
+		return `${partial("../_snippets/currentPath")}/${coverImage.image}`
+	})();
+%>
+
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 
 <head>
 	<%- partial("../_snippets/googleAnalytics") _%>
-	<%- partial("../_snippets/meta"); %>
+	<%- partial("../_snippets/meta", {
+		meta: {
+			...meta,
+			imageUrl: coverImageUrl,
+		}
+	}); %>
 	<title><%= partial("../_snippets/title"); %></title>
 	<%- partial("../_snippets/headImport"); %>
 </head>
@@ -17,6 +32,7 @@
 		<h1 class="display-1"><%= title %></h1>
 		<p><small class="text-muted">Posted on <%- partial("../_snippets/date", { date: created }) _%></small></p>
 		<div class="blog-content mt-3">
+			<%- partial("_coverImage") _%>
 			<%- yield _%>
 		</div>
 	</article>

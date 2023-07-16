@@ -4,6 +4,10 @@
 		"created": "2023-07-14",
 		"meta": {
 			"description": "Tar is an archive format commonly used in Linux for bundling and organizing files and directories."
+		},
+		"coverImage": {
+			"image": "dan-cristian-padure-XKCH37dHt7w-unsplash.jpg",
+			"alt": "Magnetic Tape"
 		}
 	}
 }

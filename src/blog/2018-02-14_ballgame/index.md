@@ -1,5 +1,3 @@
-![Ballgame](ballgame.png)
-
 Here is a fun one.
 This is the very first graphical game that I ever wrote; a simple pong clone named `BALLGAME.BAS`.
 

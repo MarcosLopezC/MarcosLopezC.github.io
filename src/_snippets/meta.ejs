@@ -41,7 +41,7 @@
 
 		writeMeta({
 			property: "og:image",
-			content: meta.image || "https://www.marcoslopezc.com/images/thumbnail.png",
+			content: `${baseUrl}/${meta.imageUrl || "images/thumbnail.png"}`,
 		});
 
 		writeMeta({
@@ -54,18 +54,7 @@
 			content: meta.locale || "en_US",
 		});
 
-		const normalizePath = (path) => {
-			const last = path[path.length - 1];
-
-			if (last === "index") {
-				return path.slice(0, -1).join("/");
-			}
-			else {
-				return path.join("/");
-			}
-		};
-
-		const path = `${baseUrl}/${normalizePath(current.path)}`;
+		const path = `${baseUrl}/${partial("currentPath")}`;
 
 		writeMeta({
 			property: "og:url",

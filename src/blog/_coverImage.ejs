@@ -1,0 +1,12 @@
+<% if (typeof coverImage === "object") { _%>
+
+<div class="text-center">
+<figure class="figure mb-5 blog-cover-image">
+	<img src="<%= coverImage.image %>" class="figure-img img-fluid rounded" alt="<%= coverImage.alt %>" style="max-height: 630px;">
+	<figcaption class="figure-caption">
+		<%- partial(`${current.path[1]}/_caption`) || coverImage.alt %>
+	</figcaption>
+</figure>
+</div>
+
+<% } _%>

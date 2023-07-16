@@ -1,0 +1,16 @@
+<%-
+	(() => {
+		const normalizePath = (path) => {
+			const last = path[path.length - 1];
+
+			if (last === "index") {
+				return path.slice(0, -1).join("/");
+			}
+			else {
+				return path.join("/");
+			}
+		};
+
+		return normalizePath(current.path);
+	})();
+%>

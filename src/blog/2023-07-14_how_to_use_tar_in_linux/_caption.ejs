@@ -1,0 +1,10 @@
+<%
+	const externalLink = (url, label) => partial("../../_snippets/externalLink", {
+		url,
+		label,
+	});
+%>
+Photo by
+<%- externalLink("https://unsplash.com/@dancristianpaduret?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText", "Dan Cristian Pădureț") %>
+on
+<%- externalLink("https://unsplash.com/photos/XKCH37dHt7w?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText", "Unsplash") %>

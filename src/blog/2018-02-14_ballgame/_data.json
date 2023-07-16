@@ -4,6 +4,10 @@
 		"created": "2018-02-14",
 		"meta": {
 			"description": "I wrote this back in high school when I was taking a programming class on QBasic..."
+		},
+		"coverImage": {
+			"image": "ballgame.png",
+			"alt": "Screenshot of BALLGAME"
 		}
 	}
 }
