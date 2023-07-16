@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 <head>
@@ -13,7 +14,7 @@ gtag('config', 'G-7ZB54YX9LX');
 <meta property="og:title" content="How to use Tar in Linux - Marcos López C.">
 <meta name="description" content="Tar is an archive format commonly used in Linux for bundling and organizing files and directories.">
 <meta property="og:description" content="Tar is an archive format commonly used in Linux for bundling and organizing files and directories.">
-<meta property="og:image" content="https://www.marcoslopezc.com/images/thumbnail.png">
+<meta property="og:image" content="https://www.marcoslopezc.com/blog/2023-07-14_how_to_use_tar_in_linux/dan-cristian-padure-XKCH37dHt7w-unsplash.jpg">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://www.marcoslopezc.com/blog/2023-07-14_how_to_use_tar_in_linux">
@@ -46,6 +47,18 @@ aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle 
 <h1 class="display-1">How to use Tar in Linux</h1>
 <p><small class="text-muted">Posted on July 14, 2023</small></p>
 <div class="blog-content mt-3">
+<div class="text-center">
+<figure class="figure mb-5 blog-cover-image">
+<img src="dan-cristian-padure-XKCH37dHt7w-unsplash.jpg" class="figure-img img-fluid rounded" alt="Magnetic Tape" style="max-height: 630px;">
+<figcaption class="figure-caption">
+
+Photo by
+<a href="https://unsplash.com/@dancristianpaduret?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" rel="noopener noreferrer nofollow" target="_blank">Dan Cristian Pădureț</a>
+on
+<a href="https://unsplash.com/photos/XKCH37dHt7w?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" rel="noopener noreferrer nofollow" target="_blank">Unsplash</a>
+</figcaption>
+</figure>
+</div>
 <p>Tar, short for <em>tape archive</em>, is an archive format commonly used in Linux for bundling and organizing files and directories.</p>
 <h2>About the Tar Format</h2><p>Tar files have a simple structure.
 They consist of a series of file entries concatenated together.
@@ -88,10 +101,7 @@ This flag is necessary when creating or manipulating Tar files.</li>
 For example, to extract the file created in the previous section, run the following command:</p>
 <pre><code class="language-sh">tar -xvf backup.tar
 </code></pre>
-<p>Let&#39;s have a look at this new flag:</p>
-<ul>
-<li><code>-x</code> (or <code>--extract</code>) tells <code>tar</code> to extract the files from the Tar archive.</li>
-</ul>
+<p>The <code>-x</code> (or <code>--extract</code>) tells <code>tar</code> to extract the files from the Tar archive.</p>
 <p>By default, the files will be extracted in the current working directory.</p>
 <p>To specify a different extraction directory, use the <code>-C</code> (or <code>--directory</code>) flag followed by the desired path. For example, to extract the files to the home directory, run the following command:</p>
 <pre><code class="language-sh">tar -xvf backup.tar -C ~/
@@ -124,6 +134,19 @@ The <code>-t</code> (or <code>--list</code>) flag tells <code>tar</code> to list
 For example, to see the contents of Tar file from the previous examples, run the following command:</p>
 <pre><code class="language-sh">tar -tf backup.tar
 </code></pre>
+<h2>Adding to a Tar file</h2><p>It is possible to append additional files or directories to an existing Tar file.
+For example, the following command will append the file <code>numbers.txt</code> to <code>backup.tar</code>.</p>
+<pre><code class="language-sh">tar -rf backup.tar numbers.txt
+</code></pre>
+<p>The <code>-r</code> (or <code>--append</code>) flag tells <code>tar</code> to append the files and directories provided to the end of the Tar file.</p>
+<p>Keep in mind that this operation is only appending a new file entry to the end of the Tar file.
+When a file being appended has the same name as one already in the Tar file, the latest one will be used by default.
+But the Tar file will contain both versions.</p>
+<p>To extract a specific occurrence, use the <code>tar</code> command with the <code>--occurrence</code> flag.
+For example:</p>
+<pre><code class="language-sh">tar -xf backup.tar --occurrence=2 numbers.txt
+</code></pre>
+<p>In this case, the <code>--occurrence</code> flag is used to tell <code>tar</code> to process the second occurrence of the file <code>numbers.txt</code> in <code>backup.tar</code>.</p>
 <h2>Conclusion</h2><p>The <code>tar</code> command has many more options that I won&#39;t explore here.
 But this should be enough to get started using Tar in Linux.</p>
 </div>
