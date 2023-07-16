@@ -50,8 +50,7 @@ For example, to extract the file created in the previous section, run the follow
 tar -xvf backup.tar
 ```
 
-Let's have a look at this new flag:
-- `-x` (or `--extract`) tells `tar` to extract the files from the Tar archive.
+The `-x` (or `--extract`) tells `tar` to extract the files from the Tar archive.
 
 By default, the files will be extracted in the current working directory.
 
