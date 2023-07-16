@@ -113,6 +113,30 @@ For example, to see the contents of Tar file from the previous examples, run the
 tar -tf backup.tar
 ```
 
+## Adding to a Tar file
+
+It is possible to append additional files or directories to an existing Tar file.
+For example, the following command will append the file `numbers.txt` to `backup.tar`.
+
+```sh
+tar -rf backup.tar numbers.txt
+```
+
+The `-r` (or `--append`) flag tells `tar` to append the files and directories provided to the end of the Tar file.
+
+Keep in mind that this operation is only appending a new file entry to the end of the Tar file.
+When a file being appended has the same name as one already in the Tar file, the latest one will be used by default.
+But the Tar file will contain both versions.
+
+To extract a specific occurrence, use the `tar` command with the `--occurrence` flag.
+For example:
+
+```sh
+tar -xf backup.tar --occurrence=2 numbers.txt
+```
+
+In this case, the `--occurrence` flag is used to tell `tar` to process the second occurrence of the file `numbers.txt` in `backup.tar`.
+
 ## Conclusion
 
 The `tar` command has many more options that I won't explore here.
