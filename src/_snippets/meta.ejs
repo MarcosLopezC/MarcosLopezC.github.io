@@ -61,6 +61,11 @@
 			content: path,
 		});
 
+		writeMeta({
+			name: "author",
+			content: "Marcos Vladimir López Castellanos",
+		});
+
 		output.push(`<link rel="canonical" href="${path}">\n`);
 
 		if (meta.noIndex) {
