@@ -1,4 +1,5 @@
 Tar, short for _tape archive_, is an archive format commonly used in Linux for bundling and organizing files and directories.
+In this article, I'll go over the basics needed to get started using this utility.
 
 ## About the Tar Format
 
