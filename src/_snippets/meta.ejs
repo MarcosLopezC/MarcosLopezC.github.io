@@ -66,6 +66,13 @@
 			content: "Marcos Vladimir López Castellanos",
 		});
 
+		if (typeof created === "string") {
+			writeMeta({
+				property: "article:published_time",
+				content: created,
+			});
+		}
+
 		output.push(`<link rel="canonical" href="${path}">\n`);
 
 		if (meta.noIndex) {
