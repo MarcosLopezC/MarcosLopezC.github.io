@@ -7,7 +7,7 @@
 				continue;
 			}
 
-			let locationName = `${basePath}/`;
+			let locationName = `${basePath}`;
 
 			if (name !== "index") {
 				locationName = `${basePath}/${name}`;
@@ -21,8 +21,8 @@
 		Object
 			.keys(content)
 			.filter(x => !x.startsWith("_"))
-			.forEach(x => {
-				getSitemapData(`${basePath}/${x}`, content[x])
+			.forEach(name => {
+				getSitemapData(`${basePath}/${name}`, content[name])
 			});
 	};
 
