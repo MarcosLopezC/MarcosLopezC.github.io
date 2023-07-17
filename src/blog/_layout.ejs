@@ -30,7 +30,7 @@
 <main class="container my-5">
 	<article class="row">
 		<h1 class="display-1"><%= title %></h1>
-		<p><small class="text-muted">Posted on <%- partial("../_snippets/date", { date: created }) _%></small></p>
+		<p><small class="text-muted">Posted on <time pubdate datetime="<%= created %>"><%- partial("../_snippets/date", { date: created }) _%></time></small></p>
 		<div class="blog-content mt-3">
 			<%- partial("_coverImage") _%>
 			<%- yield _%>
