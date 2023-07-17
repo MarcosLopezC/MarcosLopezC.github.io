@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /library/
+
+Sitemap: https://www.marcoslopezc.com/sitemap.xml
