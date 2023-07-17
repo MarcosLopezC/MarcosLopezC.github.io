@@ -69,7 +69,10 @@
 		output.push(`<link rel="canonical" href="${path}">\n`);
 
 		if (meta.noIndex) {
-			output.push('<meta name="robots" content="noindex">');
+			writeMeta({
+				name: "robots",
+				content: "noindex",
+			});
 		}
 
 		return output.join("");
