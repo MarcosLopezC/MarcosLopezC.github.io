@@ -1,0 +1,40 @@
+<%
+	const sitemapData = [];
+
+	const getSitemapData = (basePath, content) => {
+		for (const [name, page] of Object.entries(content._data)) {
+			if (page.meta && page.meta.noIndex) {
+				continue;
+			}
+
+			let locationName = `${basePath}/`;
+
+			if (name !== "index") {
+				locationName = `${basePath}/${name}`;
+			}
+
+			sitemapData.push({
+				loc: locationName,
+			});
+		}
+
+		Object
+			.keys(content)
+			.filter(x => !x.startsWith("_"))
+			.forEach(x => {
+				getSitemapData(`${basePath}/${x}`, content[x])
+			});
+	};
+
+	getSitemapData("", public);
+_%>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<% sitemapData.forEach(page => { _%>
+
+	<url>
+	<loc><%= `https://www.marcoslopezc.com${page.loc}` %></loc>
+	</url>
+
+	<% }); _%>
+</urlset>

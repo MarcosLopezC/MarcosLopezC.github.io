@@ -11,5 +11,11 @@
 		"meta": {
 			"noIndex": true
 		}
+	},
+	"sitemap.xml": {
+		"layout": false,
+		"meta": {
+			"noIndex": true
+		}
 	}
 }

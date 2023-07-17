@@ -39,3 +39,8 @@ jobs:
           git add .
           git commit -m 'Generating website'
           git push
+
+      - name: Ping Search Engines
+        run: |
+          curl https://www.google.com/ping?sitemap=https://www.marcoslopezc.com/sitemap.xml
+          curl https://www.bing.com/ping?sitemap=https://www.marcoslopezc.com/sitemap.xml
