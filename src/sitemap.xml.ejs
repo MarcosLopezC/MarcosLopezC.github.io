@@ -7,10 +7,13 @@
 				continue;
 			}
 
-			let locationName = `${basePath}`;
+			let locationName = `${basePath}/`;
 
 			if (name !== "index") {
 				locationName = `${basePath}/${name}`;
+			}
+			else if (basePath === "") {
+				locationName = "";
 			}
 
 			sitemapData.push({
