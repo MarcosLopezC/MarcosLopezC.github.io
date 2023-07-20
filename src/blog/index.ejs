@@ -34,7 +34,7 @@
 
 				writeLine(`<h2 class="blog-title">${item.title}</h2>`);
 				writeLine(`<p><small class="text-muted">`);
-				writeLine(`Posted on ${partial("../_snippets/date", { date: item.created })}`);
+				writeLine(`Posted on <time datetime="${item.created}">${partial("../_snippets/date", { date: item.created })}</time>`);
 				writeLine(`</small></p>`);
 				writeLine(`<p>${item.meta.description}</p>`);
 				writeLine(`<a href="${item.url}">Read more</a>`)
