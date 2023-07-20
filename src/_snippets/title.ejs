@@ -3,6 +3,10 @@
 		const siteTitle = "Marcos López C.";
 
 		if (typeof title === "string") {
+			if (typeof isMeta === "boolean" && isMeta) {
+				return title;
+			}
+
 			return `${title} - ${siteTitle}`;
 		}
 		else {

@@ -25,7 +25,9 @@
 
 		writeMeta({
 			property: "og:title",
-			content: meta.title || partial("title"),
+			content: meta.title || partial("title", {
+				isMeta: true,
+			}),
 		});
 
 		if (meta.description) {
