@@ -14,7 +14,7 @@ Then run the following command to install additional development tools:
 npm run install
 ```
 
-Once everything is installed, run `copy-library-files.sh` to copy the required library files to the `src/library` directory.
+Once everything is installed, run `copy-library-files.sh` to copy the required library files to the `src/library` directory. This command doesn't need to be run again unless the dependencies in `package.json` are changed.
 
 ```bash
 ./copy-library-files.sh
