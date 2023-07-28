@@ -2,6 +2,7 @@
   "name": "MarcosLopezC.github.io",
   "version": "1.0.0",
   "description": "My personal website",
+  "license": "UNLICENSED",
   "scripts": {
     "install": "npm install -g harp",
     "build": "harp src dist",
