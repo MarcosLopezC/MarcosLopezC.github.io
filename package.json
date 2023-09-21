@@ -4,7 +4,7 @@
   "description": "My personal website",
   "license": "UNLICENSED",
   "scripts": {
-    "install": "npm install -g harp",
+    "install-global-tools": "npm install -g harp",
     "build": "harp src dist",
     "dev": "harp src --port 3000"
   },
