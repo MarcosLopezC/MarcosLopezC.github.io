@@ -18,7 +18,7 @@
   "homepage": "https://github.com/MarcosLopezC/MarcosLopezC.github.io#readme",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^6.4.0",
-    "bootstrap": "^5.3.1",
+    "bootstrap": "^5.3.2",
     "font-awesome": "^4.7.0"
   }
 }
