@@ -26,6 +26,7 @@ jobs:
         working-directory: ./git
         run: |
           npm install
+          npm run install-global-tools
           sh copy-library-files.sh
 
       - name: Build
