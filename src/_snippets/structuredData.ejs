@@ -1,0 +1,9 @@
+<%-
+	(() => {
+		if (typeof structuredData === "undefined") {
+			return;
+		}
+
+		return `<script type="application/ld+json">${JSON.stringify(structuredData)}</script>`;
+	})();
+_%>

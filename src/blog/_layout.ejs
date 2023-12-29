@@ -20,6 +20,25 @@
 		}
 	}); %>
 	<title><%= partial("../_snippets/title"); %></title>
+	<%- partial("../_snippets/structuredData", {
+		structuredData: {
+			"@context": "https://schema.org",
+			"@type": "BlogPosting",
+			"headline": title,
+			"description": meta.description,
+			"image": `https://www.marcoslopezc.com/${coverImageUrl || "images/thumbnail.png"}`,
+			"dateCreated": created,
+			"datePublished": created,
+			"dateModified": created,
+			"inLanguage": "en-US",
+			"isFamilyFriendly": "true",
+			"author": {
+				"@type": "Person",
+				"name": "Marcos López C.",
+				"url": "https://www.marcoslopezc.com"
+			}
+		}
+	}); %>
 	<%- partial("../_snippets/headImport"); %>
 </head>
 

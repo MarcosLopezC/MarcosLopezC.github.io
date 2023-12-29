@@ -2,6 +2,20 @@
 	"index": {
 		"meta":{
 			"description": "A software developer by day, musician by night, photographer on the weekends."
+		},
+		"structuredData": {
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Marcos Vladimir López Castellanos",
+			"alternateName": "Marcos López C.",
+			"gender": "male",
+			"email": "contact@marcoslopezc.com",
+			"alumniOf": "Florida Atlantic University",
+			"jobTitle": "Software Developer",
+			"sameAs": [
+				"https://www.linkedin.com/in/MarcosLopezC/",
+				"https://github.com/MarcosLopezC/"
+			]
 		}
 	},
 	"contact": {
