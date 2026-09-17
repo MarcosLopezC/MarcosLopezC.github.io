@@ -25,6 +25,7 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" href="/favicon-32.svg" sizes="32x32">
 <link rel="icon" type="image/png" href="/favicon-16.svg" sizes="16x16">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="stylesheet" href="/styles/style.css">
 <script src="/library/bootstrap.bundle.min.js" async></script>
 </head>
@@ -64,7 +65,8 @@ on
 </div>
 <p>Tar, short for <em>tape archive</em>, is an archive format commonly used in Linux for bundling and organizing files and directories.
 In this article, I&#39;ll go over the basics needed to get started using this utility.</p>
-<h2>About the Tar Format</h2><p>Tar files have a simple structure.
+<h2>About the Tar Format</h2>
+<p>Tar files have a simple structure.
 They consist of a series of file entries concatenated together.
 Each file entry represents a file or directory and contains metadata about the file, such as:</p>
 <ul>
@@ -89,7 +91,8 @@ Padding ensures that each file entry occupies a multiple of a specific block siz
 <li><p><strong>End of File Markers:</strong> Tar files often end with two empty 512-byte blocks, indicating the end of the archive.</p>
 </li>
 </ol>
-<h2>Creating a Tar File</h2><p>To create a Tar file, use the <code>tar</code> command with the <code>-cvf</code> flags followed by the desired name of the Tar file and the files or directories to include.
+<h2>Creating a Tar File</h2>
+<p>To create a Tar file, use the <code>tar</code> command with the <code>-cvf</code> flags followed by the desired name of the Tar file and the files or directories to include.
 For example, to create a Tar file named <code>backup.tar</code> containing two files named <code>contacts.txt</code> and <code>config.txt</code>, run the following command:</p>
 <pre><code class="language-sh">tar -cvf backup.tar contacts.txt config.txt
 </code></pre>
@@ -101,7 +104,8 @@ When used with the <code>-c</code> flag, the verbose mode shows the names of the
 <li><code>-f</code> (or <code>--file</code>) tells <code>tar</code> the file name or device where the Tar archive will be stored.
 This flag is necessary when creating or manipulating Tar files.</li>
 </ul>
-<h2>Extracting Files From a Tar File</h2><p>To extract the contents of a Tar file, use the <code>tar</code> command with the <code>xvf</code> flags followed by the name of the Tar file.
+<h2>Extracting Files From a Tar File</h2>
+<p>To extract the contents of a Tar file, use the <code>tar</code> command with the <code>xvf</code> flags followed by the name of the Tar file.
 For example, to extract the file created in the previous section, run the following command:</p>
 <pre><code class="language-sh">tar -xvf backup.tar
 </code></pre>
@@ -110,7 +114,8 @@ For example, to extract the file created in the previous section, run the follow
 <p>To specify a different extraction directory, use the <code>-C</code> (or <code>--directory</code>) flag followed by the desired path. For example, to extract the files to the home directory, run the following command:</p>
 <pre><code class="language-sh">tar -xvf backup.tar -C ~/
 </code></pre>
-<h2>Tar File Compression</h2><p>A Tar file is effectively the result of concatenating multiple file entries, each containing metadata and file data, in a structured format.
+<h2>Tar File Compression</h2>
+<p>A Tar file is effectively the result of concatenating multiple file entries, each containing metadata and file data, in a structured format.
 To save on disk space, this file can be compressed using various compression algorithms such as GZIP or BZIP2, resulting in a compressed Tar archive.</p>
 <p>For example, to create a compressed Tar file, the <code>tar</code> command can be combined with the <code>gzip</code> command:</p>
 <pre><code class="language-sh">tar -cvf backup.tar contacts.txt config.txt | gzip &gt; backup.tar.gz
@@ -133,12 +138,14 @@ In these cases, the <code>tar</code> command needs to be provided with the appro
 For example, to extract a Tar file named <code>backup</code> compressed using GZIP, use the following command:</p>
 <pre><code class="language-sh">tar -xzf backup
 </code></pre>
-<h2>Inspecting a Tar File</h2><p>To see the contents of a Tar file, use the <code>tar</code> command with the <code>-tf</code> flag.
+<h2>Inspecting a Tar File</h2>
+<p>To see the contents of a Tar file, use the <code>tar</code> command with the <code>-tf</code> flag.
 The <code>-t</code> (or <code>--list</code>) flag tells <code>tar</code> to list the contents of the Tar file without extracting them.
 For example, to see the contents of Tar file from the previous examples, run the following command:</p>
 <pre><code class="language-sh">tar -tf backup.tar
 </code></pre>
-<h2>Adding to a Tar file</h2><p>It is possible to append additional files or directories to an existing Tar file.
+<h2>Adding to a Tar file</h2>
+<p>It is possible to append additional files or directories to an existing Tar file.
 For example, the following command will append the file <code>numbers.txt</code> to <code>backup.tar</code>.</p>
 <pre><code class="language-sh">tar -rf backup.tar numbers.txt
 </code></pre>
@@ -151,7 +158,8 @@ For example:</p>
 <pre><code class="language-sh">tar -xf backup.tar --occurrence=2 numbers.txt
 </code></pre>
 <p>In this case, the <code>--occurrence</code> flag is used to tell <code>tar</code> to process the second occurrence of the file <code>numbers.txt</code> in <code>backup.tar</code>.</p>
-<h2>Conclusion</h2><p>The <code>tar</code> command has many more options that I won&#39;t explore here.
+<h2>Conclusion</h2>
+<p>The <code>tar</code> command has many more options that I won&#39;t explore here.
 But this should be enough to get started using Tar in Linux.</p>
 </div>
 </article>
@@ -168,15 +176,6 @@ But this should be enough to get started using Tar in Linux.</p>
 <a rel="noopener noreferrer nofollow" target="_blank" href="https://github.com/MarcosLopezC/" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
 </li>
 <li>
-<a rel="noopener noreferrer nofollow" target="_blank" href="https://www.youtube.com/channel/UCbZDeXkKlq-qfjMZgBdoBgA" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-</li>
-<li>
-<a rel="noopener noreferrer nofollow" target="_blank" href="https://www.youtube.com/user/MarcosLopezMusic" aria-label="Music"><i class="fa-solid fa-music"></i></a>
-</li>
-<li>
-<a rel="noopener noreferrer nofollow" target="_blank" href="https://www.flickr.com/photos/MarcosLopezCastellanos/" aria-label="Flickr"><i class="fa-brands fa-flickr"></i></a>
-</li>
-<li>
 <a rel="me noopener noreferrer" target="_blank" href="https://mastodon.marcoslopezc.com/@marcos" aria-label="Mastodon"><i class="fa-brands fa-mastodon"></i></a>
 </li>
 <li>
@@ -185,7 +184,7 @@ But this should be enough to get started using Tar in Linux.</p>
 </ul>
 </div>
 <div class="col-12 col-sm-6 text-center text-sm-start order-sm-first">
-<span class="text-muted fw-light fs-6">&copy; 2025 Marcos López C.</span>
+<span class="text-muted fw-light fs-6">&copy; 2026 Marcos López C.</span>
 </div>
 </div>
 </div>
