@@ -1,0 +1,9 @@
+{
+	"index": {
+		"title": "Unlock LUKS volume with TPM2",
+		"created": "2026-09-16",
+		"meta": {
+			"description": "If you use full disk encryption on Linux, you can take advantage of your system’s TPM2 (Trusted Platform Module) to automatically unlock your encrypted volume at boot..."
+		}
+	}
+}
