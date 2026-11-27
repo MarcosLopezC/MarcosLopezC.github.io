@@ -1,8 +1,11 @@
 
+
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
+
 <head>
-<script defer data-domain="marcoslopezc.com" src="https://plausible.marcoslopezc.com/js/script.js"></script><meta charset="UTF-8">
+	<script defer data-domain="marcoslopezc.com" src="https://plausible.marcoslopezc.com/js/script.js"></script>
+	<meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:title" content="Unlock LUKS volume with TPM2">
@@ -20,38 +23,42 @@
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#212529">
 
-<title>Unlock LUKS volume with TPM2 - Marcos López C.</title>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Unlock LUKS volume with TPM2","description":"If you use full disk encryption on Linux, you can take advantage of your system’s TPM2 (Trusted Platform Module) to automatically unlock your encrypted volume at boot...","image":"https://www.marcoslopezc.com/images/thumbnail.png","dateCreated":"2026-09-16","datePublished":"2026-09-16","dateModified":"2026-09-16","inLanguage":"en-US","isFamilyFriendly":"true","author":{"@type":"Person","name":"Marcos López C.","url":"https://www.marcoslopezc.com"}}</script>
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+	<title>Unlock LUKS volume with TPM2 - Marcos López C.</title>
+	<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Unlock LUKS volume with TPM2","description":"If you use full disk encryption on Linux, you can take advantage of your system’s TPM2 (Trusted Platform Module) to automatically unlock your encrypted volume at boot...","image":"https://www.marcoslopezc.com/images/thumbnail.png","dateCreated":"2026-09-16","datePublished":"2026-09-16","dateModified":"2026-09-16","inLanguage":"en-US","isFamilyFriendly":"true","author":{"@type":"Person","name":"Marcos López C.","url":"https://www.marcoslopezc.com"}}</script>
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" href="/favicon-32.svg" sizes="32x32">
 <link rel="icon" type="image/png" href="/favicon-16.svg" sizes="16x16">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
 <link rel="stylesheet" href="/styles/style.css">
 <script src="/library/bootstrap.bundle.min.js" async></script>
 </head>
+
 <body class="blog">
+
 <header>
 <nav class="navbar navbar-expand-sm">
-<div class="container">
-<a class="navbar-brand fw-semibold" href="/">Marcos López C.</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div id="navbarSupportedContent" class="collapse navbar-collapse justify-content-end">
-<ul class="navbar-nav">
-<li class="nav-item"><a class="nav-link" aria-current="page" href="/">Home</a></li>
+	<div class="container">
+		<a class="navbar-brand fw-semibold" href="/">Marcos López C.</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div id="navbarSupportedContent" class="collapse navbar-collapse justify-content-end">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" aria-current="page" href="/">Home</a></li>
 <li class="nav-item"><a class="nav-link" aria-current="page" href="/blog">Blog</a></li>
-<li class="nav-item"><a class="nav-link" aria-current="page" href="/contact">Contact</a></li></ul>
-</div>
-</div>
+<li class="nav-item"><a class="nav-link" aria-current="page" href="/contact">Contact</a></li>			</ul>
+		</div>
+	</div>
 </nav>
-</header><main class="container my-5">
-<article class="row">
-<h1 class="display-1">Unlock LUKS volume with TPM2</h1>
-<p><small class="text-muted">Posted on <time pubdate datetime="2026-09-16">September 16, 2026</time></small></p>
-<div class="blog-content mt-3">
-<p>If you use full disk encryption on Linux, you can take advantage of your system’s TPM2 (Trusted Platform Module) to automatically unlock your encrypted volume at boot, eliminating the need to manually enter your password each time the system starts.
+</header>
+<main class="container my-5">
+	<article class="row">
+		<h1 class="display-1">Unlock LUKS volume with TPM2</h1>
+		<p><small class="text-muted">Posted on <time pubdate datetime="2026-09-16">September 16, 2026</time></small></p>
+		<div class="blog-content mt-3">
+						<p>If you use full disk encryption on Linux, you can take advantage of your system’s TPM2 (Trusted Platform Module) to automatically unlock your encrypted volume at boot, eliminating the need to manually enter your password each time the system starts.
 In this article, I’ll show you how to set it up in Fedora (although the process is almost the same for other distributions).</p>
 <h2>Verify TPM2 Availability</h2>
 <p>First, check if a TPM2 module is present.
@@ -108,32 +115,35 @@ To enroll with PCRs:</p>
 <p>That’s it.
 Your system should now unlock itself automatically every time you boot up, without needing to enter your disk encryption password.
 If any of the TPM measurements fail or change, you’ll simply be prompted to enter your password by hand; you won’t be locked out of your system.</p>
-</div>
-</article>
+		</div>
+	</article>
 </main>
+
 <footer>
 <div class="container">
-<div class="row gy-3">
-<div class="col-12 col-sm-6 text-center text-sm-end">
-<ul class="social">
-<li>
-<a rel="noopener noreferrer nofollow" target="_blank" href="https://www.linkedin.com/in/MarcosLopezC/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-</li>
-<li>
-<a rel="noopener noreferrer nofollow" target="_blank" href="https://github.com/MarcosLopezC/" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-</li>
-<li>
-<a rel="me noopener noreferrer" target="_blank" href="https://mastodon.marcoslopezc.com/@marcos" aria-label="Mastodon"><i class="fa-brands fa-mastodon"></i></a>
-</li>
-<li>
-<a href="mailto:contact@marcoslopezc.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
-</li>
-</ul>
+	<div class="row gy-3">
+		<div class="col-12 col-sm-6 text-center text-sm-end">
+			<ul class="social">
+				<li>
+					<a rel="noopener noreferrer nofollow" target="_blank" href="https://www.linkedin.com/in/MarcosLopezC/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+				</li>
+				<li>
+					<a rel="noopener noreferrer nofollow" target="_blank" href="https://github.com/MarcosLopezC/" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+				</li>
+				<li>
+					<a rel="me noopener noreferrer" target="_blank" href="https://mastodon.marcoslopezc.com/@marcos" aria-label="Mastodon"><i class="fa-brands fa-mastodon"></i></a>
+				</li>
+				<li>
+					<a href="mailto:contact@marcoslopezc.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-12 col-sm-6 text-center text-sm-start order-sm-first">
+			<span class="text-muted fw-light fs-6">&copy; 2026 Marcos López C.</span>
+		</div>
+	</div>
 </div>
-<div class="col-12 col-sm-6 text-center text-sm-start order-sm-first">
-<span class="text-muted fw-light fs-6">&copy; 2026 Marcos López C.</span>
-</div>
-</div>
-</div>
-</footer></body>
+</footer>
+</body>
+
 </html>

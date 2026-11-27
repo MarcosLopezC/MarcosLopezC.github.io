@@ -1,8 +1,11 @@
 
+
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
+
 <head>
-<script defer data-domain="marcoslopezc.com" src="https://plausible.marcoslopezc.com/js/script.js"></script><meta charset="UTF-8">
+	<script defer data-domain="marcoslopezc.com" src="https://plausible.marcoslopezc.com/js/script.js"></script>
+	<meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:title" content="How to use Tar in Linux">
@@ -20,50 +23,56 @@
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#212529">
 
-<title>How to use Tar in Linux - Marcos López C.</title>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to use Tar in Linux","description":"Tar is an archive format commonly used in Linux for bundling and organizing files and directories. In this article, I'll go over the basics needed to get started using this utility.","image":"https://www.marcoslopezc.com/blog/2023-07-14_how_to_use_tar_in_linux/dan-cristian-padure-XKCH37dHt7w-unsplash.jpg","dateCreated":"2023-07-14","datePublished":"2023-07-14","dateModified":"2023-07-14","inLanguage":"en-US","isFamilyFriendly":"true","author":{"@type":"Person","name":"Marcos López C.","url":"https://www.marcoslopezc.com"}}</script>
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+	<title>How to use Tar in Linux - Marcos López C.</title>
+	<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to use Tar in Linux","description":"Tar is an archive format commonly used in Linux for bundling and organizing files and directories. In this article, I'll go over the basics needed to get started using this utility.","image":"https://www.marcoslopezc.com/blog/2023-07-14_how_to_use_tar_in_linux/dan-cristian-padure-XKCH37dHt7w-unsplash.jpg","dateCreated":"2023-07-14","datePublished":"2023-07-14","dateModified":"2023-07-14","inLanguage":"en-US","isFamilyFriendly":"true","author":{"@type":"Person","name":"Marcos López C.","url":"https://www.marcoslopezc.com"}}</script>
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" href="/favicon-32.svg" sizes="32x32">
 <link rel="icon" type="image/png" href="/favicon-16.svg" sizes="16x16">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
 <link rel="stylesheet" href="/styles/style.css">
 <script src="/library/bootstrap.bundle.min.js" async></script>
 </head>
+
 <body class="blog">
+
 <header>
 <nav class="navbar navbar-expand-sm">
-<div class="container">
-<a class="navbar-brand fw-semibold" href="/">Marcos López C.</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div id="navbarSupportedContent" class="collapse navbar-collapse justify-content-end">
-<ul class="navbar-nav">
-<li class="nav-item"><a class="nav-link" aria-current="page" href="/">Home</a></li>
+	<div class="container">
+		<a class="navbar-brand fw-semibold" href="/">Marcos López C.</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div id="navbarSupportedContent" class="collapse navbar-collapse justify-content-end">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" aria-current="page" href="/">Home</a></li>
 <li class="nav-item"><a class="nav-link" aria-current="page" href="/blog">Blog</a></li>
-<li class="nav-item"><a class="nav-link" aria-current="page" href="/contact">Contact</a></li></ul>
-</div>
-</div>
+<li class="nav-item"><a class="nav-link" aria-current="page" href="/contact">Contact</a></li>			</ul>
+		</div>
+	</div>
 </nav>
-</header><main class="container my-5">
-<article class="row">
-<h1 class="display-1">How to use Tar in Linux</h1>
-<p><small class="text-muted">Posted on <time pubdate datetime="2023-07-14">July 14, 2023</time></small></p>
-<div class="blog-content mt-3">
+</header>
+<main class="container my-5">
+	<article class="row">
+		<h1 class="display-1">How to use Tar in Linux</h1>
+		<p><small class="text-muted">Posted on <time pubdate datetime="2023-07-14">July 14, 2023</time></small></p>
+		<div class="blog-content mt-3">
+			
 <div class="text-center">
 <figure class="figure mb-5 blog-cover-image">
-<img src="dan-cristian-padure-XKCH37dHt7w-unsplash.jpg" class="figure-img img-fluid rounded" alt="Magnetic Tape" style="max-height: 630px;">
-<figcaption class="figure-caption">
-
+	<img src="dan-cristian-padure-XKCH37dHt7w-unsplash.jpg" class="figure-img img-fluid rounded" alt="Magnetic Tape" style="max-height: 630px;">
+	<figcaption class="figure-caption">
+		
 Photo by
 <a href="https://unsplash.com/@dancristianpaduret?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" rel="noopener noreferrer nofollow" target="_blank">Dan Cristian Pădureț</a>
 on
 <a href="https://unsplash.com/photos/XKCH37dHt7w?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" rel="noopener noreferrer nofollow" target="_blank">Unsplash</a>
-</figcaption>
+	</figcaption>
 </figure>
 </div>
-<p>Tar, short for <em>tape archive</em>, is an archive format commonly used in Linux for bundling and organizing files and directories.
+
+			<p>Tar, short for <em>tape archive</em>, is an archive format commonly used in Linux for bundling and organizing files and directories.
 In this article, I&#39;ll go over the basics needed to get started using this utility.</p>
 <h2>About the Tar Format</h2>
 <p>Tar files have a simple structure.
@@ -161,32 +170,35 @@ For example:</p>
 <h2>Conclusion</h2>
 <p>The <code>tar</code> command has many more options that I won&#39;t explore here.
 But this should be enough to get started using Tar in Linux.</p>
-</div>
-</article>
+		</div>
+	</article>
 </main>
+
 <footer>
 <div class="container">
-<div class="row gy-3">
-<div class="col-12 col-sm-6 text-center text-sm-end">
-<ul class="social">
-<li>
-<a rel="noopener noreferrer nofollow" target="_blank" href="https://www.linkedin.com/in/MarcosLopezC/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-</li>
-<li>
-<a rel="noopener noreferrer nofollow" target="_blank" href="https://github.com/MarcosLopezC/" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-</li>
-<li>
-<a rel="me noopener noreferrer" target="_blank" href="https://mastodon.marcoslopezc.com/@marcos" aria-label="Mastodon"><i class="fa-brands fa-mastodon"></i></a>
-</li>
-<li>
-<a href="mailto:contact@marcoslopezc.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
-</li>
-</ul>
+	<div class="row gy-3">
+		<div class="col-12 col-sm-6 text-center text-sm-end">
+			<ul class="social">
+				<li>
+					<a rel="noopener noreferrer nofollow" target="_blank" href="https://www.linkedin.com/in/MarcosLopezC/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+				</li>
+				<li>
+					<a rel="noopener noreferrer nofollow" target="_blank" href="https://github.com/MarcosLopezC/" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+				</li>
+				<li>
+					<a rel="me noopener noreferrer" target="_blank" href="https://mastodon.marcoslopezc.com/@marcos" aria-label="Mastodon"><i class="fa-brands fa-mastodon"></i></a>
+				</li>
+				<li>
+					<a href="mailto:contact@marcoslopezc.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-12 col-sm-6 text-center text-sm-start order-sm-first">
+			<span class="text-muted fw-light fs-6">&copy; 2026 Marcos López C.</span>
+		</div>
+	</div>
 </div>
-<div class="col-12 col-sm-6 text-center text-sm-start order-sm-first">
-<span class="text-muted fw-light fs-6">&copy; 2026 Marcos López C.</span>
-</div>
-</div>
-</div>
-</footer></body>
+</footer>
+</body>
+
 </html>
